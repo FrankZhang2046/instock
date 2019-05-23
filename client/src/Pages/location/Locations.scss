@@ -52,3 +52,29 @@
     }
 }
 
+.tableLabels {
+    display: none;
+
+    @include tablet {
+        display: none;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__warehouse {
+        width: 210px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+
+        &__labels {
+            width: 50%;
+        }
+    }
+}
