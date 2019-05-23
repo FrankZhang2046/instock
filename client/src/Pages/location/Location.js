@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import warehouseData from './data';
-import LocationDetails from './LocationDetails';
-
+import LocationDetails from '../../components/LocationDetails/LocationDetails';
+import './Locations.scss';
 
 export class Location extends Component {
     state = {
