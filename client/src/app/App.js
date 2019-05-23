@@ -2,7 +2,7 @@ import React from 'react';
 import Inventory from '../Pages/Inventory/Inventory';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar/NavBar';
-import '../styles/styles.scss';
+import '../styles/_master.scss';
 import Location from '../Pages/location/Location';
 
 
