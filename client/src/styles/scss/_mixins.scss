@@ -80,8 +80,13 @@
 //     line-height: 1.5rem;
 // }
 
-// @mixin h4-para-mobile {
-//     font-family: $font-stack;
-//     font-size: 0.8125rem;
-//     line-height: 1.125rem;
-// }
+@mixin h4-para-mobile {
+    font-family: $font-stack;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+@mixin nav-selection {
+    border-bottom: solid 5px $color-white;
+    color: $color-white;
+}

@@ -1,7 +1,7 @@
-@import "../../styles/mixins.scss";
+@import "../../styles/scss/master.scss";
 
 .nav {
-    background-color: $black;
+    background-color: $color-black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +47,7 @@
         width: 50%;
         padding: 0rem 0 0.5rem 0;
         font-size: 1rem;
-        color: $silver;
+        color: $color-silver;
         
         @include tablet {
             width: 6rem;

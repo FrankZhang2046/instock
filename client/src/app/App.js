@@ -2,8 +2,12 @@ import React from 'react';
 import Inventory from '../Pages/Inventory/Inventory';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar/NavBar';
+<<<<<<< HEAD
 import '../styles/styles.scss';
 import Warehouse from '../components/Warehouse/Warehouse';
+=======
+import '../styles/scss/_master.scss';
+>>>>>>> develop-nestea
 import Location from '../Pages/location/Location';
 
 
