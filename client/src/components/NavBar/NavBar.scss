@@ -26,6 +26,11 @@
     &__wrapper {
         display: flex;
         align-items: center;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
 
         @include desktop {
             margin: 0 180px;
