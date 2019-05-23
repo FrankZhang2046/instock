@@ -85,6 +85,7 @@ export default class Warehouse extends Component {
                     <p><div className="footer__quantity--number">12,000</div></p>
                     <p><div className="footer__status">STATUS</div></p>
                     <p><div className="footer__status--info">In Stock</div></p>
+                    <p><div className="footer__status--underline"></div></p>
 
                 </div> 
             </div>
