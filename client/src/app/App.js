@@ -1,11 +1,16 @@
 import React from 'react';
 import Inventory from '../Pages/Inventory/Inventory';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import NavBar from '../components/NavBar/NavBar';
+import '../styles/styles.scss';
+
 
 function App() {
   return (
-    <div className="App">
-      <Inventory />
-    </div>
+      <BrowserRouter>
+          <NavBar />
+          <Inventory />
+      </BrowserRouter>
   );
 }
 
