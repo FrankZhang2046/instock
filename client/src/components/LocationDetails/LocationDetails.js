@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Locations.scss';
+import './LocationDetails.scss';
 import rightArrow from '../../assets/icons/SVG/Icon-arrow-right.svg'
 
 export class LocationDetails extends Component {

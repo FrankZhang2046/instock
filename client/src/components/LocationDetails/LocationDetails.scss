@@ -1,0 +1,71 @@
+@import '../../styles/scss/master';
+
+.locationDetail {
+    padding: 32px 0 0 0;
+    border-bottom: solid 1px #AFAFAF;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__info {
+        margin: 0;
+        padding-bottom: 24px;
+
+        @include desktop {
+            width: 210px;
+        }
+
+        &--bold {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        &--noBold {
+            margin: 0;
+        }
+
+        &--italic {
+            margin: 0;
+            font-style: italic;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        }
+
+        @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 75%;
+        }
+    }
+
+    &__container {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+.infoWidth {
+    @include tablet {
+        width: 50%;
+    }
+}
+
+.rightArrow {
+    position: absolute;
+    left: 95%;
+}
