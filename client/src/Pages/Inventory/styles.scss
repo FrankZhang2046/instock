@@ -1,5 +1,15 @@
+@import '../../styles/scss/master';
+
+
 .inventory{
+    &__container{
+        margin: auto 16px;
+    }
+
     &__search{
+        @include tablet{
+            float: right;
+        }
         position: relative;
         width:200px;
         height: 48px;

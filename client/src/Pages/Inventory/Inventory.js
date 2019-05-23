@@ -17,7 +17,7 @@ export default class Inventory extends Component{
 
     render(){
         return(
-            <>
+            <div className="inventory__container">
                 <h1 className="inventory__header">Inventory</h1>
                 <div className="inventory__search">
                     <img className="inventory__search--icon" src={searchIcon} alt=""/>
@@ -28,7 +28,7 @@ export default class Inventory extends Component{
                         return (<Item item={product} removeItem={this.removeItem}/>)
                     })}
                 </div>
-            </>
+            </div>
         )
     }
 }
