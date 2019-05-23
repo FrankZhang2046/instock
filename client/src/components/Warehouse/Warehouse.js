@@ -1,8 +1,9 @@
 
 import React, { Component } from 'react'
 import warehousedata from './data.js';
+import WarehouseData from './WarehouseData.js';
 
-export class WarehouseData extends Component {
+export class Warehouse extends Component {
 
     state = {
         warehousedata
@@ -13,11 +14,11 @@ export class WarehouseData extends Component {
     return (
       <div>
         {this.state.warehousedata.map((items, index) => 
-        <Warehouse warehousedata={items} key={index} />)
+        <WarehouseData warehousedata={items} key={index} />)
         }
     </div>
     );
   }
 }
 
-export default WarehouseData;
+export default Warehouse;

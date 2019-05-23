@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
           <NavBar />
           <Switch>
-            <WarehouseData exact path="/warehouse" />
+            <Warehouse exact path="/warehouse" />
             <Inventory exact path="/inventory"/>
             <Location exact path="/locations"/> comment out inventory or location to see page each page individually
           </Switch>
