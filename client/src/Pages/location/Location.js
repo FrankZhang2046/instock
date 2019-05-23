@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import warehouseData from './data';
 import LocationDetails from './LocationDetails';
-import './Locations.scss';
 
 
 export class Location extends Component {
