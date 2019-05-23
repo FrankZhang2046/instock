@@ -1,87 +1,87 @@
-@import './global-fonts';
-@import './variables';
+// @import './global-fonts';
+// @import './variables';
 
-@mixin tablet {
-    @media (min-width: 48rem) {
-        @content
-    }
-}
+// @mixin tablet {
+//     @media (min-width: 48rem) {
+//         @content
+//     }
+// }
 
-@mixin laptop-small {
-    @media (min-width: 64rem) {
-        @content
-    }
-}
+// @mixin laptop-small {
+//     @media (min-width: 64rem) {
+//         @content
+//     }
+// }
 
-@mixin desktop {
-    @media (min-width: 90rem) {
-        @content
+// @mixin desktop {
+//     @media (min-width: 90rem) {
+//         @content
 
-    }
-}
+//     }
+// }
 
-@mixin hero-header {
-    font-family: $font-stack-bold;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-}
+// @mixin hero-header {
+//     font-family: $font-stack-bold;
+//     font-size: 3.75rem;
+//     line-height: 4.25rem;
+// }
 
-@mixin h1-header-mobile {
-    font-family: $font-stack-bold;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
+// @mixin h1-header-mobile {
+//     font-family: $font-stack-bold;
+//     font-size: 1.5rem;
+//     line-height: 2rem;
+// }
 
-@mixin h1-header-tablet {
-    @include h1-header-mobile;
+// @mixin h1-header-tablet {
+//     @include h1-header-mobile;
 
-    @include tablet {
-        font-size: 2.25rem;
-        line-height: 2.75rem;
-    }
-}
+//     @include tablet {
+//         font-size: 2.25rem;
+//         line-height: 2.75rem;
+//     }
+// }
 
-@mixin h2-header {
-    font-family: $font-stack-bold;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
+// @mixin h2-header {
+//     font-family: $font-stack-bold;
+//     font-size: 1.5rem;
+//     line-height: 2rem;
+// }
 
-@mixin h3-subheader {
-    font-family: $font-stack-demi;
-    font-size: 1rem;
-    line-height: 1.375rem;
-}
+// @mixin h3-subheader {
+//     font-family: $font-stack-demi;
+//     font-size: 1rem;
+//     line-height: 1.375rem;
+// }
 
-@mixin h4-para-comments {
-    font-family: $font-stack;
-    color: $color-silver;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-}
+// @mixin h4-para-comments {
+//     font-family: $font-stack;
+//     color: $color-silver;
+//     font-size: 0.875rem;
+//     line-height: 1.375rem;
+// }
 
-@mixin h4-lists-contactInfo {
-    font-family: $font-stack;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-}
+// @mixin h4-lists-contactInfo {
+//     font-family: $font-stack;
+//     font-size: 0.875rem;
+//     line-height: 1.25rem;
+// }
 
-@mixin label {
-    font-family: $font-stack-demi;
-    color: $color-silver;
-    font-size: 12px;
-    line-height: 1.25rem;
-    text-transform: uppercase;
-}
+// @mixin label {
+//     font-family: $font-stack-demi;
+//     color: $color-silver;
+//     font-size: 12px;
+//     line-height: 1.25rem;
+//     text-transform: uppercase;
+// }
 
-@mixin h2-subheader-mobile {
-    font-family: $font-stack-demi;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-}
+// @mixin h2-subheader-mobile {
+//     font-family: $font-stack-demi;
+//     font-size: 0.875rem;
+//     line-height: 1.5rem;
+// }
 
-@mixin h4-para-mobile {
-    font-family: $font-stack;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-}
+// @mixin h4-para-mobile {
+//     font-family: $font-stack;
+//     font-size: 0.8125rem;
+//     line-height: 1.125rem;
+// }

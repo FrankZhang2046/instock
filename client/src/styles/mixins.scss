@@ -1,44 +1,44 @@
 
-//colors
-$silver: #AFAFAF;
-$white: #FFFFFF;
-$black: #323232;
-$alabaster: #FAFAFA;
-$mercury: #E1E1E1;
+// //colors
+// $silver: #AFAFAF;
+// $white: #FFFFFF;
+// $black: #323232;
+// $alabaster: #FAFAFA;
+// $mercury: #E1E1E1;
 
-//fonts
-$font-family-primary: 'Avenir Next Pro Regular', sans-serif;
-$font-family-demi-bold: 'Avenir Next Demi Bold', sans-serif;
-$font-family-bold: 'Avenir Next Bold', sans-serif;
+// //fonts
+// $font-family-primary: 'Avenir Next Pro Regular', sans-serif;
+// $font-family-demi-bold: 'Avenir Next Demi Bold', sans-serif;
+// $font-family-bold: 'Avenir Next Bold', sans-serif;
 
 
-// @font-face {
-//     font-family: 'Avenir Next Pro Regular';
-//     src: url('client/src/assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf') format('opentype');
+// // @font-face {
+// //     font-family: 'Avenir Next Pro Regular';
+// //     src: url('client/src/assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf') format('opentype');
+// // }
+// // @font-face {
+// //     font-family: 'Avenir Next Demi Bold';
+// //     src: url('client/src/assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf') format('opentype');
+// // }
+// // @font-face {
+// //     font-family: 'Avenir Next Bold';
+// //     src: url('client/src/assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf') format('opentype');
+// // }
+
+// @mixin tablet {
+//     @media (min-width: 426px) {
+//         @content;
+//     }
 // }
-// @font-face {
-//     font-family: 'Avenir Next Demi Bold';
-//     src: url('client/src/assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf') format('opentype');
+
+// @mixin desktop {
+//     @media (min-width: 1440px) {
+//         padding: 0 180px;
+//         @content;
+//     }
 // }
-// @font-face {
-//     font-family: 'Avenir Next Bold';
-//     src: url('client/src/assets/_Global Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf') format('opentype');
+
+// @mixin nav-selection {
+//     border-bottom: solid 5px $white;
+//     color: $white;
 // }
-
-@mixin tablet {
-    @media (min-width: 426px) {
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media (min-width: 1440px) {
-        padding: 0 180px;
-        @content;
-    }
-}
-
-@mixin nav-selection {
-    border-bottom: solid 5px $white;
-    color: $white;
-}
