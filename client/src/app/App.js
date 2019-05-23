@@ -12,6 +12,7 @@ function App() {
           <NavBar />
           <Switch>
             <Inventory exact path="/inventory"/>
+            <Inventory exact path={`/inventory/:id`}/>
             <Location exact path="/locations"/> {/* comment out inventory or location to see page each page individually */}
           </Switch>
       </BrowserRouter>
