@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NavBar from './components/NavBar.js';
 import Warehouse from './components/Warehouse/Warehouse.js';
 import './App.css';
 
@@ -9,11 +10,9 @@ function App() {
       <header className="App-header">
       <div>
          <BrowserRouter>
-         {/* <Navigation /> */}
+         <NavBar />
            <Switch>
              <Route exact path="/" component={Warehouse} />
-           {/* <Route path="/Upload" component={Upload} />
-           <Route path="/video/:id" component={Home}/> */}
          </Switch>
         </BrowserRouter>
       </div>

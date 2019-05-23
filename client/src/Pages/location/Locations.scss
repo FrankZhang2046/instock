@@ -1,0 +1,133 @@
+@mixin tablet {
+    @media (min-width: 426px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1023px) {
+        @content;
+    }    
+}
+
+.headerSearchBar{
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    &__header {
+        font-size: 24px;
+        margin: 32px 0 16px;
+
+        @include tablet {
+            font-size: 34px;
+            margin: 48px 0 48px;
+        }
+
+        @include desktop {
+            font-size: 34px;
+            margin: 48px 0 48px;
+        }
+    }
+
+    &__searchBar {
+        background: url(../../assets/icons/SVG/Icon-search.svg);
+        background-position: 7px 13px;
+        background-repeat: no-repeat;
+        padding: 0 0 0 35px;
+        height: 48px;
+        width: 260px;
+        border-radius: 4px;
+        border: solid 1px #AFAFAF;
+
+        @include tablet {
+            align-self: flex-end;
+            margin-bottom: 48px;
+        }
+
+        @include desktop {
+            align-self: flex-end;
+            margin-bottom: 48px;
+        }
+    }
+}
+
+.locationDetail {
+    padding: 32px 0 0 0;
+    border-bottom: solid 1px #AFAFAF;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__info {
+        margin: 0;
+        padding-bottom: 24px;
+
+        @include desktop {
+            width: 210px;
+        }
+
+        &--bold {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        &--noBold {
+            margin: 0;
+        }
+
+        &--italic {
+            margin: 0;
+            font-style: italic;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        }
+
+        @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 75%;
+        }
+    }
+
+    &__container {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+.infoWidth {
+    @include tablet {
+        width: 50%;
+    }
+}
+
+.rightArrow {
+    position: absolute;
+    left: 95%;
+}
