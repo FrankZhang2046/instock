@@ -1,0 +1,48 @@
+.header {
+    margin: 80px 0 0 16px;
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    &__address, &__contact {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: grey;
+    }
+
+    &__street, &__apt, &__city, &__phone, &__email, &__person--name, 
+    &__person--position, &__zip, {
+        font-size:0.85rem;
+    }
+
+    &__email {
+        margin-bottom: 32px;
+    }
+
+}
+
+.footer {
+    padding-top: 16px;
+    background-color: silver;
+    border-bottom: 1px solid pink;
+
+    &__title {
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0 0 0 16px;
+    }
+    &__item, &__timeline , &__quantity, &__status, &__location { 
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: grey;
+        margin: 0 0 0 16px;
+    }
+
+    &__description, &__date, &__city, 
+    &__quantity--number,  &__status--info, {
+        font-size:0.85rem;
+        margin: 0 16px 24px 16px;;
+    }
+
+}
