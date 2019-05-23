@@ -10,8 +10,10 @@ function App() {
   return (
       <BrowserRouter>
           <NavBar />
-          <Inventory />
-          <Location /> {/* comment out inventory or location to see page each page individually */}
+          <Switch>
+            <Inventory exact path="/inventory"/>
+            <Location exact path="/locations"/> {/* comment out inventory or location to see page each page individually */}
+          </Switch>
       </BrowserRouter>
   );
 }
