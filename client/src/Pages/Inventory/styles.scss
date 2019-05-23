@@ -1,0 +1,13 @@
+.inventory{
+    &__search{
+        position: relative;
+        width:200px;
+        height: 48px;
+    
+        &--icon{
+            z-index: 1000;
+            position: absolute;
+            top:24px;
+        }
+    }
+}
