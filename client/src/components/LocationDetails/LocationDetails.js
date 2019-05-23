@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './LocationDetails.scss';
-import rightArrow from '../../assets/icons/SVG/Icon-arrow-right.svg'
+import './Locations.scss';
+import rightArrow from '../../assets/icons/SVG/Icon-arrow-right.svg';
 
 export class LocationDetails extends Component {
     render() {

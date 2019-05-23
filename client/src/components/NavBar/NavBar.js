@@ -14,7 +14,7 @@ export class NavBar extends Component {
                 <nav>
                     <div className="nav">
                         <div className="nav__wrapper">
-                            <Link to="/inventory" class="nav__logo-link">
+                            <Link to="/inventory" className="nav__logo-link">
                                 <img src={logo} alt="BandSite logo" className="nav__logo" />
                             </Link>
                             <ul className="nav__links">
