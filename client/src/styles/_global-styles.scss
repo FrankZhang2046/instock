@@ -1,0 +1,14 @@
+@import './global-fonts';
+@import './mixins';
+@import './variables';
+
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+body {
+    color: $color-black;
+    margin: 0;
+}
