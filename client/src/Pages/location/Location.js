@@ -6,7 +6,8 @@ import addIcon from '../../assets/icons/SVG/Icon-add.svg';
 
 export class Location extends Component {
     state = {
-        warehouseData
+        warehouseData,
+        modalShowing: false
     }
 
     render() {
