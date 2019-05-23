@@ -1,8 +1,9 @@
 
 import React, { Component } from 'react'
 // import data from './data.js';
-// import iconarrowback from '../../src/Icon-back-arrow';
-import '../../styles.scss';
+import iconback from './SVG/Icon-back-arrow.svg';
+import kebab from './SVG/Icon-kebab-default.svg';
+import './styles.scss';
 // import axios from 'axios';
 
 export default class Warehouse extends Component {
@@ -52,8 +53,10 @@ export default class Warehouse extends Component {
            
             <div>
                 <div className="header">
-                    {/* <div className="header__icon"><img src={iconarrowback} alt="iconleft"/></div> */}
-                    <div className="header__title">Warehouse Name</div>
+                    <div className="header__title">
+                    <div className="header__title--icon"><img src={iconback} alt="iconleft"/></div>
+                    <div className="header__title--name">Warehouse Name</div>
+                    </div>
                     <p><div className="header__address">ADDRESS</div></p>
                     <p><div className="header__street">123 Main Street W.</div>
                     <div className="header__apt">Suite 201</div>
@@ -69,10 +72,13 @@ export default class Warehouse extends Component {
                     <div className="header__email">weinberg@instock.com</div>
                     </p>
                 </div> 
-                {/* <div className="header__icon"><img src={iconarrowback} alt="iconleft"/></div> */}
                 <div className="footer">
-                <p><div className="footer__item">ITEM</div></p>
-                    <div className="footer__title">Product Name Here</div>
+                <div className="footer__title">
+                <p><div className="footer__title--item">ITEM</div></p>
+                <div className="footer__title--icon"><img src={kebab} alt="kebab"/></div>
+                
+                </div>
+                    <div className="footer__product">Product Name Here</div>
                    
                     <p><div className="footer__description">Here is a very brief description of the product in the inventory...
                     </div>

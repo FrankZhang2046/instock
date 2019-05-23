@@ -1,0 +1,90 @@
+.header {
+    margin: 104px 0 0 16px;
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: bold;
+
+        @include tablet {
+            
+        }
+
+            &--icon {
+                margin-right: 16px;
+            }
+    }
+
+    &__address, &__contact {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: grey;
+    }
+
+    &__street, &__apt, &__city, &__phone, 
+        &__email, &__person--name, 
+            &__person--position, &__zip, {
+                font-size:0.85rem;
+    }
+
+    &__email {
+        margin-bottom: 32px;
+    }
+}
+
+.footer {
+    padding-top: 16px;
+    background-color: silver;
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: grey;
+        margin: 0 16px;
+    }
+
+    &__timeline , &__quantity, 
+        &__status, &__location { 
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: grey;
+            margin: 0 0 0 16px;
+    }
+
+    &__description, &__date, &__city, 
+        &__quantity--number {
+            font-size: 1rem;
+            margin: 0 16px 24px 16px;
+    }
+
+    &__product{
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0 16px 24px 16px;
+
+    }
+
+    &__status--info {
+        font-size: 0.9rem;
+        margin: 0 16px;
+        padding-bottom: 8px;
+    }
+
+    &__status--underline {
+        border-bottom: 2px solid pink;
+        margin: 0 16px;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) 
+        {
+        @content;
+    }
+}
