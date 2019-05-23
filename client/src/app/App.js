@@ -1,20 +1,16 @@
 import React from 'react';
 import Inventory from '../Pages/Inventory/Inventory';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import NavBar from '../components/NavBar/NavBar';
-<<<<<<< HEAD
-import '../styles/styles.scss';
-import Warehouse from '../components/Warehouse/Warehouse';
-=======
+import { BrowserRouter, Switch } from 'react-router-dom';
+// import NavBar from '../components/NavBar/NavBar';
 import '../styles/scss/_master.scss';
->>>>>>> develop-nestea
 import Location from '../Pages/location/Location';
+import Warehouse from '../components/Warehouse/Warehouse';
 
 
 function App() {
   return (
       <BrowserRouter>
-          <NavBar />
+          {/* <NavBar /> */}
           <Switch>
             <Warehouse exact path="/warehouse" />
             <Inventory exact path="/inventory"/>

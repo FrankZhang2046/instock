@@ -1,12 +1,14 @@
-.header {
-    margin: 104px 0 0 16px;
+@import '../../styles/scss//master';
 
+.header {
+    margin-top: 32px;
     &__title {
         display: flex;
         flex-direction: row;
         align-items: center;
-        font-size: 1.6rem;
+        font-size: 1.9rem;
         font-weight: bold;
+        margin: 0 16px;
 
             &--icon {
                 margin-right: 16px;
@@ -17,63 +19,56 @@
         font-size: 0.9rem;
         font-weight: bold;
         color: grey;
+        margin: 0 16px;
     }
 
-    &__street, &__apt, &__city, &__phone, 
-        &__email, &__person--name, 
-            &__person--position, &__zip {
-                font-size:0.85rem;
+    &__street, &__number, &__city, &__phone, 
+        &__email, &__name, 
+            &__position, &__postal {
+                font-size:0.9rem;
+                margin: 0 16px;
     }
 
     &__email {
         margin-bottom: 32px;
     }
+
+    // &__border {
+    //     border-bottom: 2px solid pink;
+    //     margin: 32px 16px;
+    // }
 }
 
-// .footer {
-//     padding-top: 16px;
-//     background-color: silver;
+.product {
+    padding-top: 16px;
+    background-color: $color-alabaster;
 
-//     &__title {
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-between;
-//         align-items: center;
-//         font-size: 0.9rem;
-//         font-weight: bold;
-//         color: grey;
-//         margin: 0 16px;
-//     }
+    &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 16px;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
 
-//     &__timeline , &__quantity, 
-//         &__status, &__location { 
-//             font-size: 0.9rem;
-//             font-weight: bold;
-//             color: grey;
-//             margin: 0 0 0 16px;
-//     }
+    &__order , &__quantity, &__item,
+        &__status, &__location, { 
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: grey;
+            margin: 0 16px;
+    }
 
-//     &__description, &__date, &__city, 
-//         &__quantity--number {
-//             font-size: 1rem;
-//             margin: 0 16px 24px 16px;
-//     }
+    &__description, &__order--date, &__available, &__location1, &__info {
+            font-size: 1rem;
+            margin: 0 16px 24px 16px;
+    }
 
-//     &__product{
-//         font-size: 1rem;
-//         font-weight: bold;
-//         margin: 0 16px 24px 16px;
-
-//     }
-
-//     &__status--info {
-//         font-size: 0.9rem;
-//         margin: 0 16px;
-//         padding-bottom: 8px;
-//     }
-
-//     &__status--underline {
-//         border-bottom: 2px solid pink;
-//         margin: 0 16px;
-//     }
-// }
+    &__border {
+        border-bottom: 1px solid silver;
+        margin: 0 16px;
+        margin-bottom: 24px;
+    }
+}
