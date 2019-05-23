@@ -1,0 +1,19 @@
+.item{
+    &__container{
+    }
+
+    &__removeButton{
+        position: relative;
+
+        &--popUp-clicked{
+            position: absolute;
+            width:200px;
+            height:100px;
+        }
+        &--popUp-folded{
+            display:none;
+            width:200px;
+            height:100px;
+        }
+    }
+}
