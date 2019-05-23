@@ -1,5 +1,13 @@
 @import "../../styles/scss/master.scss";
 
+.nav a {
+    text-decoration: none;
+}
+
+#nav__current {
+    @include nav-selection;
+}
+
 .nav {
     background-color: $color-black;
     display: flex;
@@ -15,6 +23,20 @@
         box-sizing: border-box;
     }
 
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        @include desktop {
+            margin: 0 180px;
+        }
+    }
+
     &__logo {
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
@@ -22,17 +44,18 @@
         @include tablet {
             padding: 1rem 1rem 1rem 1.5rem;
             padding-top: 1rem;
-            width: 8rem;
+            width: 10rem;
         }
 
         @include desktop {
             padding: 0;
+            width: 8rem;
         }
     }
 
     &__links {
         display: flex;
-        justify-content: flex-start;
+        // justify-content: space-evenly;
         align-items: center;
         list-style-type: none;
         width: 100%;
@@ -41,11 +64,11 @@
 
     }
 
-    &__links-bio, &__links-shows {
+    &__links-inv, &__links-loc {
         display: flex;
         justify-content: center;
-        width: 50%;
-        padding: 0rem 0 0.5rem 0;
+        padding: 0rem 0 1rem 0;
+        width: 50vw;
         font-size: 1rem;
         color: $color-silver;
         
@@ -57,6 +80,7 @@
         }
 
         @include desktop {
+            padding: 0 180px;
             margin-left: 5%;
             padding: 1.72rem 0.5rem;
         }
@@ -64,5 +88,6 @@
         &:hover {
             @include nav-selection;
         }
+
     }
 }
