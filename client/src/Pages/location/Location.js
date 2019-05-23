@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import warehouseData from './data';
 import LocationDetails from '../../components/LocationDetails/LocationDetails';
 import './Locations.scss';
+import addIcon from '../../assets/icons/SVG/Icon-add.svg';
 
 export class Location extends Component {
     state = {
@@ -10,7 +11,7 @@ export class Location extends Component {
 
     render() {
         return (
-            <div>
+            <div className="pageContainer">
                 <div className="headerSearchBar">
                     <h1 className="headerSearchBar__header" >Locations</h1>
                     <input className="headerSearchBar__searchBar" type="text"  placeholder="search"></input>
@@ -28,6 +29,9 @@ export class Location extends Component {
                         warehouseData={items}
                         key={index} />)
                 }
+                <button className="addIcon">
+                    <img src={addIcon} alt="Add Icon"/>
+                </button>
             </div>
         )
     }
