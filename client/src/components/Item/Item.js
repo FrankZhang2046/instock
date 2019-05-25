@@ -21,7 +21,6 @@ class Item extends Component{
 
         return(
             <div className="item__container">
-                {console.log(this.props.item)}
                 <div className="item__removeButton">
                     <img ref={this.dottedButton} className="item__removeButton" src={dottedMenu} alt="" onClick={()=>{(this.toggleButton())}}/>
                     <div className={this.state.toggled===false? 'item__removeButton--popUp-folded' : 'item__removeButton--popUp-clicked'} onClick={()=>this.clickHandler(id)}>Remove</div>

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import myJson from '../../data/fakeData.json';
 import Item from '../../components/Item/Item.js';
 import searchIcon from '../../assets/icons/SVG/Icon-search.svg';
 import axios from 'axios';
@@ -7,13 +6,19 @@ import './styles.scss';
 
 export default class Inventory extends Component{
     state={
-        inventory: myJson
+        inventory: []
     }
     
     componentDidMount(){
         axios.get(`http://localhost:8080/inventory`)
-            .then(result => console.log(result)
+            .then(result => this.setState({inventory: result.data})
             )
+    }
+
+    componentDidUpdate(){
+        if (this.props.warehouseID) {
+            this.setState({inventory: this.state.inventory.filter(item => item.warehouseID === this.props.warehouseID)})
+        }
     }
 
     removeItem = (id) =>{
