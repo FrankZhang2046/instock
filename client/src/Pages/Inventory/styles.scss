@@ -6,16 +6,23 @@
         margin: auto 16px;
     }
 
+    &__header{
+        &--container{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
     &__search{
         @include tablet{
-            float: right;
+            align-self: flex-end;
         }
         position: relative;
         width:200px;
         height: 48px;
     
         &--icon{
-            z-index: 1000;
             position: absolute;
             top:24px;
         }
