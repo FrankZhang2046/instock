@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import iconback from '../../assets/icons/SVG/Icon-back-arrow.svg';
+import Inventory from '../../Pages/Inventory/Inventory.js';
 import './styles.scss'
 
 export class WarehouseData extends Component {
@@ -9,6 +10,7 @@ export class WarehouseData extends Component {
 
         return (
             <div className="header">
+            {console.log(address)}
                 <p><div className="header__title"> 
                     <div className="header__title--icon">    
                         <img src={iconback} alt="iconback"/> </div>
@@ -16,9 +18,9 @@ export class WarehouseData extends Component {
                 </div>
                 </p>
                 <div className="header__address">ADDRESS</div>
-                <p><div className="header__street">{address.street}</div>
+                {/* <p><div className="header__street">{address.street}</div>
                     <div className="header__number">{address.suiteNum}</div> 
-                </p>
+                </p> */}
                 <p><div className="header__city">{address.city}</div>
                     <div className="header__postal">{address.postal}</div> 
                 </p>
@@ -30,7 +32,7 @@ export class WarehouseData extends Component {
                     <div className="header__email">{contact.email}</div> 
                 </p>
                     <div className="header__border"></div>
-
+                    <Inventory />
             </div>
         )
     }
