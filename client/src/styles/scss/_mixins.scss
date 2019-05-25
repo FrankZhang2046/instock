@@ -16,7 +16,6 @@
 @mixin desktop {
     @media (min-width: 90rem) {
         @content
-
     }
 }
 
@@ -87,6 +86,15 @@
 }
 
 @mixin nav-selection {
-    border-bottom: solid 5px $color-white;
+    border-bottom: solid 3px $color-white;
     color: $color-white;
+    padding-bottom: 13px;
+
+    @include tablet {
+        padding: 1.72rem 0.5rem;
+    }
+
+    @include desktop {
+        padding-bottom: 24.52px;
+    }
 }

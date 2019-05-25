@@ -61,7 +61,6 @@
 
     @include desktop {
         display: flex;
-        justify-content: space-between;
     }
 
     &__warehouse {
@@ -76,5 +75,35 @@
         &__labels {
             width: 50%;
         }
+    }
+}
+
+.pageContainer {
+    position: relative;
+}
+
+.addIcon {
+    background: #0065AD;
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    top: 85vh;
+    left: 75vw;
+    border: none;
+    padding: 0;
+
+    @include tablet {
+        top: 80vh;
+        left: 85vw;
+        height: 80px;
+        width: 80px;
+    }
+
+    @include desktop {
+        top: 83vh;
+        left: 90vw;
+        height: 80px;
+        width: 80px;
     }
 }
