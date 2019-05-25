@@ -1,0 +1,14 @@
+@import '../../styles/scss/master';
+
+.closeModal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.3)
+}
+
+.inventoryModal__container {
+    position: absolute;
+    top: 20%;
+    margin-left: 20%;
+}
