@@ -1,19 +1,95 @@
-.item{
-    &__container{
+@import "../../styles/scss/master";
+
+.item {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+
+    @include tablet {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+  }
+
+  &__header{
+    @include tablet{
+        display:none;
+    }
     }
 
-    &__removeButton{
-        position: relative;
+    &__description{
+    @include tablet{
+        flex-direction: column;
+        width: 20%;
+    }
+}
 
-        &--popUp-clicked{
-            position: absolute;
-            width:200px;
-            height:100px;
-        }
-        &--popUp-folded{
-            display:none;
-            width:200px;
-            height:100px;
+
+&__date {
+    @include tablet{
+        width: 20%;
+        flex-direction: column;
+        align-self: center;
+    }
+    &--header{
+        display:none;
+    }
+}
+&__location {
+    @include tablet{
+        align-self: center;
+    }
+    &--header{
+        @include tablet {
+          display: none;
         }
     }
+}
+&__quantity {
+    @include tablet{
+        align-self: center;
+    }
+    &--header{
+        @include tablet {
+          display: none;
+        }
+    }
+}
+&__status {
+    @include tablet{
+        align-self: center;
+    }
+    &--header{
+
+        @include tablet {
+          display: none;
+        }
+    }
+}
+
+  &__removeButton {
+    position: relative;
+    top: 20px;
+    float: right;
+
+    @include tablet{
+        order: 5;
+    }
+
+    &--popUp-clicked {
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      width: 200px;
+      height: 100px;
+      border: 1px solid grey;
+    }
+    &--popUp-folded {
+      display: none;
+      width: 200px;
+      height: 100px;
+    }
+  }
 }
