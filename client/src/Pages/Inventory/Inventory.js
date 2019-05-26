@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import Item from '../../components/Item/Item.js';
 import searchIcon from '../../assets/icons/SVG/Icon-search.svg';
 import axios from 'axios';
@@ -53,11 +54,13 @@ export default class Inventory extends Component{
                     <img className="inventory__search--icon" src={searchIcon} alt=""/>
                     <input className="inventory__search" type="text" name="serach" id="search"/>
                 </div></div>
+                <Link to="/product/:id">
                 <div className="inventory__items">
                     {this.state.inventory.map(product=>{
                         return (<Item item={product} removeItem={this.removeItem}/>)
                     })}
                 </div>
+                </Link>
                 <InventoryModal
                     className="inventoryModal"
                     open={this.state.modalOpen}
