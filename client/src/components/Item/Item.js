@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss'
 
 class Item extends Component{
-    state={
+    state = {
         toggled: false
     }
     
