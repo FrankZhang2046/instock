@@ -48,12 +48,10 @@ export default class Inventory extends Component{
         return(
             <div className="inventory__container">
                 { this.state.modalOpen ? <div onClick={this.closeModal} className="closeModal"></div> : null }
-                <div className="inventory__header--container">
-                    <h1 className="inventory__header">Inventory</h1>
-                    <div className="inventory__search">
-                    <img className="inventory__search--icon" src={searchIcon} alt=""/>
-                    <input className="inventory__search" type="text" name="serach" id="search"/>
-                </div></div>
+                <div className="page-header">
+                    <h1 className="page-header__heading">Inventory</h1>
+                    <input type="text" className="page-header__searchbar" placeholder="search"/>
+                </div>
                 <Link to="/product/:id">
                 <div className="inventory__items">
                     {this.state.inventory.map(product=>{
@@ -62,10 +60,8 @@ export default class Inventory extends Component{
                 </div>
                 </Link>
                 <InventoryModal
-                    className="inventoryModal"
                     open={this.state.modalOpen}
                     close={this.closeModal} >
-                        This is some random test text!
                 </InventoryModal>
                 <button className="addIcon"
                         onClick={this.openModal}>
