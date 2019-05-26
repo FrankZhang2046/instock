@@ -15,7 +15,7 @@ function App() {
             <Inventory exact path="/inventory"/>
             <Inventory exact path="/inventory/:id"/>
             <Location exact path="/locations"/> 
-            <ProductView exact path="/product/:id" />
+            <Route exact path="/product/:id" render={(props)=><ProductView {...props}/>} />
             <Inventory path="/" />
           </Switch>
       </BrowserRouter>

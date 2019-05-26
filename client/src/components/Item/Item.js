@@ -21,7 +21,7 @@ class Item extends Component{
         const {id, name, description, lastOrdered, location, quantity, isInstock} = this.props.item;
 
         return(
-            <Link to={`/product/${id}`}>
+            <Link to={{pathname:`/product/${id}`, state:{test: this.props.item}}}>
             <div className="item__container">
                 <div className="item__removeButton">
                     <img ref={this.dottedButton} className="item__removeButton" src={dottedMenu} alt="" onClick={()=>{(this.toggleButton())}}/>
