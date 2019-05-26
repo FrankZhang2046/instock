@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import shortid from 'shortid';
+import shortid from 'shortid';
 import ProductItem from './ProductItem';
 import backArrow from '../../assets/icons/SVG/Icon-back-arrow.svg';
 import './products.scss';
