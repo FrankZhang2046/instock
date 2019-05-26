@@ -10,12 +10,53 @@
 
 .inventoryModal {
     @include modal-window;
+
+    &__header {
+        @include h1-header-tablet;
+    }
+
+    &__label {
+        @include label;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            width: 13.75rem;
+        }
+
+        &--itemDescription {
+            @include modal-textarea;
+        }
+    }
+
+    &__instock {
+        height: 2.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            width: 13.75rem;
+        }
+
+        &--label {
+            @include h4-lists-contactInfo;
+        }
+    }
+
+    &__buttons {
+        @include modal-buttons;
+    }
 }
 
-.h1-header {
-    @include h1-header-tablet;
+.modal__input--field {
+    @include modal-input;
 }
 
-.label {
-    @include label;
+.react-switch-handle {
+    outline: none;
 }
