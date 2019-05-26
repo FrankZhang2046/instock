@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
 import Item from '../../components/Item/Item.js';
 import searchIcon from '../../assets/icons/SVG/Icon-search.svg';
 import axios from 'axios';
@@ -9,7 +8,7 @@ import InventoryModal from '../../components/InventoryModal/InventoryModal';
 
 
 export default class Inventory extends Component{
-    state={
+    state = {
         inventory: [],
         modalOpen: false,
     }
@@ -58,7 +57,6 @@ export default class Inventory extends Component{
                         return (<Item item={product} removeItem={this.removeItem}/>)
                     })}
                 </div>
-                </Link>
                 <InventoryModal
                     open={this.state.modalOpen}
                     close={this.closeModal} >
