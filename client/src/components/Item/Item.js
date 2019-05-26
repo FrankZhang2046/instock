@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import dottedMenu from '../../assets/icons/SVG/Icon-kebab-default.svg';
+import { Link } from 'react-router-dom';
 import './styles.scss'
 
 class Item extends Component{
@@ -20,6 +21,7 @@ class Item extends Component{
         const {id, name, description, lastOrdered, location, quantity, isInstock} = this.props.item;
 
         return(
+            <Link to={{pathname:`/product/${id}`, state:{test: this.props.item}}}>
             <div className="item__container">
                 <div className="item__removeButton">
                     <img ref={this.dottedButton} className="item__removeButton" src={dottedMenu} alt="" onClick={()=>{(this.toggleButton())}}/>
@@ -47,6 +49,7 @@ class Item extends Component{
                     <p className="item__status--content">{isInstock ? 'In Stock' : 'Out of Stock'}</p>
                 </div>
             </div>
+            </Link>
         )
     }
 }
