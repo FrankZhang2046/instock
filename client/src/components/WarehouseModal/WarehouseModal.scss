@@ -1,0 +1,238 @@
+@import '../../styles/scss/master.scss';
+
+.modal {
+    background: white;
+    border: 1px solid #d0cccc;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    margin: 0 auto 0;
+    transition: all .8s;
+    width: 100vw;
+    border-radius: 4px;
+
+    @include tablet {
+        width: 576px;
+    }
+
+    @include desktop {
+        width: 576px;
+    }
+
+    &__container {
+        margin: 32px 16px 60px;
+
+        @include tablet {
+            margin: 0 48px 0;
+        }
+
+        @include desktop {
+            margin: 0 48px 0;
+        }
+    }
+
+    &--header {
+        font-family: $font-stack-bold;
+        font-weight: bold;
+        font-size: 24px;
+
+        @include tablet {
+            font-size: 36px;
+            margin: 56px 0 48px;
+        }
+
+        @include desktop {
+            font-size: 36px;
+            margin: 56px 0 48px;
+        }
+    }
+
+    &__inputRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        @include tablet {
+            width: 220px;
+        }
+
+        @include desktop {
+            width: 220px;
+        }
+
+        &__label {
+            margin-bottom: 8px;
+        }
+
+        &__inputField {
+            border: solid 1px #afafaf;
+            border-radius: 4px;
+            height: 48px;
+            padding: 10px 16px;
+        }
+
+        &__warehouseInput {
+            border: solid 1px #afafaf;
+            border-radius: 4px;
+            height: 80px;
+            padding: 10px 10px;
+            resize: none;
+
+            @include tablet {
+                width: 480px;
+            }
+
+            @include desktop {
+                width: 480px;
+            }
+        }
+
+        &__warehouse {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            margin: 40px 0 40px;
+            flex-direction: row-reverse;
+        }
+
+        @include desktop {
+            margin: 40px 0 40px;
+            flex-direction: row-reverse;
+        }
+
+        &__save {
+            margin-bottom: 8px;
+            height: 48px;
+            width: 100%;
+            font-family: 'AvenirNextProLT-demi';
+            color: white;
+            background: $color-brainflix-blue;
+            border: none;
+            border-radius: 4px;
+
+            @include tablet {
+                width: 160px;
+            }
+
+            @include desktop {
+                width: 160px;
+            }
+        }
+
+        &__cancel {
+            height: 48px;
+            width: 100%;
+            font-family: 'AvenirNextProLT-demi';
+            color: $color-brainflix-blue;
+            background: white;
+            border: none;
+
+            @include tablet {
+                width: 160px;
+            }
+
+            @include desktop {
+                width: 160px;
+            }
+        }
+    }
+}
+
+.backdrop {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 0px;
+        transition: all 1.3s;
+        height: 100%;
+        width: 100%;
+}
+
+
+
+// @include tablet {
+//     .modal {
+//         background: white;
+//         border: 1px solid #d0cccc;
+//         box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+//         margin: 100px auto 0;
+//         transition: all .8s;
+//         width: 576px;
+
+//         &__container {
+//             margin: 80px 48px 60px;
+//         }
+
+//         &--header {
+//             font-family: $font-stack-bold;
+//             font-weight: bold;
+//         }
+
+//         &__inputRow {
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: space-between;
+//         }
+
+//         &__inputs {
+//             display: flex;
+//             flex-direction: column;
+//             width: 220px;
+//             margin-bottom: 24px;
+
+//             &__label {
+//                 margin-bottom: 8px;
+//             }
+
+//             &__inputField {
+//                 border: solid 1px #afafaf;
+//                 border-radius: 4px;
+//                 height: 48px;
+//                 padding: 10px 16px;
+//             }
+
+//             &__warehouseCategory {
+//                 border: solid 1px #afafaf;
+//                 border-radius: 4px;
+//                 height: 80px;
+//                 padding: 10px 10px;
+//             }
+
+//             &--long {
+//                 display: flex;
+//                 flex-direction: column;
+//                 width: 480px;
+//                 margin-bottom: 24px;
+//             }
+//         }
+//     }
+
+//     .backdrop {
+//         background-color: rgba(0, 0, 0, 0.3);
+//         position: fixed;
+//         top: 0px;
+//         transition: all 1.3s;
+//         height: 100%;
+//         width: 100%;
+//     }
+// }
+
