@@ -1,5 +1,9 @@
 @import '../../styles/scss/master';
 
+a {
+    text-decoration: none;
+    color: $color-black;
+}
 
 .inventory{
     &__container{
