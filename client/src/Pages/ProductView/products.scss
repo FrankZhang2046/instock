@@ -29,8 +29,9 @@
         justify-content: center;
         height: 1.25rem;
         width: 6rem;
-        background-color: green;
+        background-color: rgb(101, 187, 51);
         color: white;
+        border-radius: 4px;
     }
 
     &__outofstock {
@@ -39,6 +40,7 @@
         justify-content: center;
         height: 1.25rem;
         width: 6rem;
-        background-color: grey;
+        background-color: rgb(209, 203, 203);
+        border-radius: 4px;
     }
 }
