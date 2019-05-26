@@ -1,43 +1,35 @@
 
 import React, { Component } from 'react'
-import warehousedata from './data1.js';
-import inventorydata from './data2.js';
+// import warehousedata from './data1.js';
+// import inventorydata from './data2.js';
 // import InventoryData from './InventoryData.js';
 import WarehouseData from './WarehouseData.js';
-// import Inventory from '../../Pages/Inventory/Inventory.js';
+import Inventory from '../../Pages/Inventory/Inventory.js';
+import warehouseData from '../../Pages/location/data.js';
+// import Location from '../LocationDetails/LocationDetails.js';
 
 export class Warehouse extends Component {
 
     state = {
-        warehousedata,
-        inventorydata
+        warehouseData
     }
 
   render() {
 
     return (
       <div>
-        {/* <WarehouseData warehousedata={warehousedata[0]}/> */}
-        {console.log(warehousedata)}
-        {this.state.warehousedata
-          .filter(warehouse => warehousedata.id === inventorydata.id)
-          .map(warehouse => 
-          <WarehouseData warehousedata={warehousedata[0]}/>)
-        }
+        <WarehouseData warehouseData={warehouseData[0]}/>
+        {/* {this.state.warehouseData.map((items, index) => 
+          <WarehouseData
+              warehouseData={items}
+              key={index} />)        
+        } */}
+           <Inventory /> 
+               
       </div>
-      // <Inventory />
      
     );
   }
 }
 
 export default Warehouse;
-
-{/* <div>
-{this.state.warehousedata.map((items, index) => 
-<WarehouseData warehousedata={items} key={index} />)
-}
-{this.state.inventorydata.map((items, index) => 
-<InventoryData inventorydata={items} key={index} />)
-}
-</div> */}

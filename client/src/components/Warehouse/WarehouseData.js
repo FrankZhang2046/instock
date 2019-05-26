@@ -6,11 +6,13 @@ import './styles.scss'
 export class WarehouseData extends Component {
 
     render() {
-       const { name, address, contact } = this.props.warehousedata;
+
+    const { name, address, contact } = this.props.warehouseData;
+
+    console.log(this.props.warehouseData.id)
 
         return (
             <div className="header">
-            {console.log(address)}
                 <p><div className="header__title"> 
                     <div className="header__title--icon">    
                         <img src={iconback} alt="iconback"/> </div>
@@ -18,11 +20,11 @@ export class WarehouseData extends Component {
                 </div>
                 </p>
                 <div className="header__address">ADDRESS</div>
-                {/* <p><div className="header__street">{address.street}</div>
+                <p><div className="header__street">{address.street}</div>
                     <div className="header__number">{address.suiteNum}</div> 
-                </p> */}
+                </p>
                 <p><div className="header__city">{address.city}</div>
-                    <div className="header__postal">{address.postal}</div> 
+                    <div className="header__postal">{this.props.warehouseData.address.postal}</div> 
                 </p>
                 <div className="header__contact">CONTACT</div>
                 <p> <div className="header__name">{contact.name}</div>
@@ -31,8 +33,10 @@ export class WarehouseData extends Component {
                 <p><div className="header__phone">{contact.phone}</div>
                     <div className="header__email">{contact.email}</div> 
                 </p>
-                    <div className="header__border"></div>
-                    <Inventory />
+                    
+                 {/* <Inventory />    */}
+                 
+                    
             </div>
         )
     }
