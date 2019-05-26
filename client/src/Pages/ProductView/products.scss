@@ -1,6 +1,7 @@
 @import "../../styles/scss/master";
 
 .product-page {
+    margin: 1rem;
 
     &__header {
         width: 80%;
@@ -13,5 +14,31 @@
 
     &__title {
         margin-left: 1rem;
+    }
+
+    &__back-link {
+        display: flex;
+    }
+}
+
+.product-item {
+
+    &__instock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.25rem;
+        width: 6rem;
+        background-color: green;
+        color: white;
+    }
+
+    &__outofstock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.25rem;
+        width: 6rem;
+        background-color: grey;
     }
 }

@@ -4,9 +4,14 @@ export class ProductItem extends Component {
 
     
     render() {
+        const toggle = this.props.isInstock? "product-item__instock" : "product-item__outofstock"
         return (
             <div>
                 <section className="product-item">
+                    <h5 
+                    className={`${toggle} + product-item__headings product-item__headings--instock`}>
+                        {this.props.isInstock? "In Stock" : "Out of Stock"}
+                    </h5>
                     <h5 className="product-item__headings product-item__headings--description">
                         ITEM DESCRIPTION
                     </h5>
@@ -25,7 +30,7 @@ export class ProductItem extends Component {
                     <p className="product-item__paragraph">
                         {this.props.reference}
                     </p>
-                    <h5 className="product-item__headings product-item__headings--location">
+                    <h5 className="product-item__headings product-item__headings--lastordered">
                         LAST ORDERED
                     </h5>
                     <p className="product-item__paragraph">

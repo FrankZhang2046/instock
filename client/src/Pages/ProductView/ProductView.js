@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 // import axios from 'axios';
 // import shortid from 'shortid';
 import ProductItem from './ProductItem';
@@ -16,11 +17,13 @@ export class ProductView extends Component {
 
     render() {
 
-        const { categories, description, lastOrdered, location, name, quantity} = this.props.location.state.test
+        const { categories, description, lastOrdered, location, name, quantity, isInstock } = this.props.location.state.test
         return (
             <div className="product-page">
                 <div className="product-page__header">
-                    <img src={backArrow} className="product-page__arrow" alt="back arrow" />
+                    <Link to="/inventory" className="product-page__back-link">
+                        <img src={backArrow} className="product-page__arrow" alt="back arrow" />
+                    </Link>
                     <h1 className="product-page__title">
                         {name}
                     </h1>
@@ -32,6 +35,7 @@ export class ProductView extends Component {
                     location={location}
                     quantity={quantity}
                     categories={categories} 
+                    isInstock={isInstock}
                     />
                 <button className="product-page__button">EDIT</button>
             </div>
