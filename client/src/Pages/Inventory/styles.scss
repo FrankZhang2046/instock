@@ -5,30 +5,31 @@ a {
     color: $color-black;
 }
 
-.inventory{
-    &__container{
-        margin: auto 16px;
+.page-header {
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
     }
 
-    &__header{
-        &--container{
-            display:flex;
-            flex-direction: row;
-            justify-content: space-between;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    &__heading {
+        @include h1-header-mobile;
+
+        @include tablet {
+            @include h1-header-tablet;
+            margin: 48px 0 48px;
         }
     }
 
-    &__search{
-        @include tablet{
-            align-self: flex-end;
-        }
-        position: relative;
-        width:200px;
-        height: 48px;
-    
-        &--icon{
-            position: absolute;
-            top:24px;
-        }
+    &__searchbar {
+        @include searchbar;
     }
 }
