@@ -7,7 +7,7 @@ import addIcon from '../../assets/icons/SVG/Icon-add.svg';
 import InventoryModal from '../../components/InventoryModal/InventoryModal';
 
 
-export default class Inventory extends Component{
+export default class Inventory extends Component {
     state = {
         inventory: [],
         modalOpen: false,
@@ -51,7 +51,6 @@ export default class Inventory extends Component{
                     <h1 className="page-header__heading">Inventory</h1>
                     <input type="text" className="page-header__searchbar" placeholder="search"/>
                 </div>
-                <Link to="/product/:id">
                 <div className="inventory__items">
                     {this.state.inventory.map(product=>{
                         return (<Item key={product.id} item={product} removeItem={this.removeItem}/>)
