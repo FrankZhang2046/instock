@@ -8,7 +8,7 @@ import InventoryModal from '../../components/InventoryModal/InventoryModal';
 
 
 export default class Inventory extends Component{
-    state={
+    state = {
         inventory: [],
         modalOpen: false,
     }
