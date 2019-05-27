@@ -5,24 +5,36 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid grey;
+    margin: auto 16px;
 
     @include tablet {
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
+        margin: auto 24px;
     }
   }
 
   &__header{
+    margin-top: 32px;
+    margin-bottom: 0px;
+    @include label;
     @include tablet{
         display:none;
     }
+
+      
     }
 
     &__description{
+    @include h3-subheader;
     @include tablet{
         flex-direction: column;
         width: 20%;
+    }
+    &--content{
+        margin-top: 16px;
+        @include h4-para-mobile;
     }
 }
 
@@ -32,9 +44,10 @@
         width: 20%;
         flex-direction: column;
         align-self: center;
+        display:none;
     }
     &--header{
-        display:none;
+      @include label;
     }
 }
 &__location {
@@ -42,6 +55,7 @@
         align-self: center;
     }
     &--header{
+        @include label;
         @include tablet {
           display: none;
         }
@@ -52,6 +66,7 @@
         align-self: center;
     }
     &--header{
+        @include label;
         @include tablet {
           display: none;
         }
@@ -64,6 +79,7 @@
     }
     &--header{
 
+        @include label;
         @include tablet {
           display: none;
         }
@@ -72,18 +88,19 @@
 
   &__removeButton {
     position: relative;
-    top: -250px;
+    top: -230px;
     float: right;
+    margin-right: 16px;
   
     @include tablet{
         order: 5;
         top:-40px;
-        margin-left: 20px;
+        margin-right: 0px;
     }
 
     &--popUp-clicked {
       position: absolute;
-      top: 50px;
+      top: -220px;
       right: 10px;
       width: 200px;
       height: 100px;
