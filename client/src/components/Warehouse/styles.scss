@@ -1,74 +1,145 @@
-@import '../../styles/scss//master';
+@import "../../styles/scss//master";
 
-.header {
-    margin-top: 32px;
-    &__title {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: 1.9rem;
-        font-weight: bold;
-        margin: 0 16px;
-
-            &--icon {
-                margin-right: 16px;
-            }
-    }
-
-    &__address, &__contact {
-        font-size: 0.9rem;
-        font-weight: bold;
-        color: grey;
-        margin: 0 16px;
-    }
-
-    &__street, &__number, &__city, &__phone, 
-        &__email, &__name, 
-            &__position, &__postal {
-                font-size:0.9rem;
-                margin: 0 16px;
-    }
-
-    &__email {
-        margin-bottom: 32px;
-    }
-
-    // &__border {
-    //     border-bottom: 2px solid pink;
-    //     margin: 32px 16px;
-    // }
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
+.header {
+  margin-top: 32px;
+
+  &__all__place1 {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      // justify-items: left;
+    }
+  }
+
+  // &__all__place1, &__all__place2 {
+  //     display: flex;
+  //     flex-direction: row;
+  //     justify-items: left;
+  // }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin: 0 16px;
+
+    &--icon {
+      margin-right: 16px;
+    }
+  }
+
+  &__address,
+  &__contact {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: grey;
+    margin: 0 16px;
+  }
+
+  &__street,
+  &__number,
+  &__city,
+  &__phone,
+  &__email,
+  &__name,
+  &__position,
+  &__postal {
+    font-size: 0.9rem;
+    margin: 0 16px;
+  }
+
+  &__email {
+    margin-bottom: 32px;
+  }
+}
+// &__border {
+//     border-bottom: 2px solid pink;
+//     margin: 32px 16px;
+// }
+
+// &__all {
+//     // @include tablet {
+//     // display: flex;
+//     // flex-direction: row;
+
+//     // }
+//     &__place1, &__place2 {
+
+//         @include tablet {
+//             display: flex;
+//             flex-direction: column;
+
+//         }
+// }
+
+// }
+
+// .header__all {
+
+// //     @include tablet {
+// //         // position: relative;
+// //         display: flex;
+// //         flex-direction: row;
+
+// //     }
+// @include tablet {
+//     &__place2 {
+
+//             // position: relative;
+//             margin-left: 400px;
+//             margin-top: -138px;
+
+//         }
+//     }
+// }
+
+// }
+
 .product {
-    padding-top: 16px;
-    background-color: $color-alabaster;
+  padding-top: 16px;
+  background-color: $color-alabaster;
 
-    &__title {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 16px;
-        font-size: 1.3rem;
-        font-weight: bold;
-    }
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
 
-    &__order , &__quantity, &__item,
-        &__status, &__location { 
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: grey;
-            margin: 0 16px;
-    }
+  &__order,
+  &__quantity,
+  &__item,
+  &__status,
+  &__location {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: grey;
+    margin: 0 16px;
+  }
 
-    &__description, &__order--date, &__available, &__location1, &__info {
-            font-size: 1rem;
-            margin: 0 16px 24px 16px;
-    }
+  &__description,
+  &__order--date,
+  &__available,
+  &__location1,
+  &__info {
+    font-size: 1rem;
+    margin: 0 16px 24px 16px;
+  }
 
-    &__border {
-        border-bottom: 1px solid silver;
-        margin: 0 16px;
-        margin-bottom: 24px;
-    }
+  &__border {
+    border-bottom: 1px solid silver;
+    margin: 0 16px;
+    margin-bottom: 24px;
+  }
 }
