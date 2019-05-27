@@ -23,6 +23,17 @@
 
 .product-item {
 
+    &__headings {
+        color: $color-silver;
+        font-family: $font-stack-demi;
+        font-size: 0.75rem;
+        margin: 1rem 0;
+    }
+
+    &__paragraph {
+        font-size: 0.7rem;
+    }
+
     &__instock {
         display: flex;
         align-items: center;

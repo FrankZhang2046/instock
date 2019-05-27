@@ -9,28 +9,37 @@ import './products.scss';
 
 export class ProductView extends Component {
     state = {
-        warehouse : []
+        warehouse : {}
     }
 
     componentDidMount(){
         axios.get(`http://localhost:8080/warehouse`)
             .then(result => {
-                this.setState({warehouse: result.data}
-                    )
-                console.log(this.state.warehouse)}
+                this.setState({warehouse: result.data})
+                }
             )
     }
 
     render() {
 
         const { categories, description, lastOrdered, location, name, quantity, isInstock, warehouseId } = this.props.location.state.test;
-        const currentWarehouse = this.state.warehouse
-                                    .filter(warehouse => 
-                                    warehouse.id === warehouseId
-                                );
-        console.log(currentWarehouse);
+       
+        function currentWarehouse(item) { 
+            if (this.state.warehouse.id === warehouseId)
+            return true
+        }
+
+        function search(id, array){
+            for (var i = 0; i < array.length; i++) {
+                if (array[i].id === id) {
+                    return array[i];
+                }
+            }
+        }
+        
 
         return (
+            this.state.warehouse.length > 1 ?
             <div className="product-page">
                 <div className="product-page__header">
                     <Link to="/inventory" className="product-page__back-link">
@@ -42,7 +51,8 @@ export class ProductView extends Component {
                 </div>
                 <ProductItem 
                     description={description} 
-                    // name={currentWarehouse.contact.name}
+                    // reference={reference}
+                    name={(search(warehouseId, this.state.warehouse)).contact.name}
                     lastOrdered={lastOrdered}
                     location={location}
                     quantity={quantity}
@@ -50,7 +60,7 @@ export class ProductView extends Component {
                     isInstock={isInstock}
                     />
                 <button className="product-page__button">EDIT</button>
-            </div>
+            </div> : null
         )
     }
 }

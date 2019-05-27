@@ -9,7 +9,7 @@ export class ProductItem extends Component {
             <div>
                 <section className="product-item">
                     <h5 
-                    className={`${toggle} + product-item__headings product-item__headings--instock`}>
+                    className={`${toggle} + product-item__headings--instock`}>
                         {this.props.isInstock? "In Stock" : "Out of Stock"}
                     </h5>
                     <h5 className="product-item__headings product-item__headings--description">
