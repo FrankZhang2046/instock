@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './LocationDetails.scss';
 import rightArrow from '../../assets/icons/SVG/Icon-arrow-right.svg';
+import { Link } from 'react-router-dom'; // *** NEED WAREHOUSE INVENTORY LIST TO COMPLETE LINK ***
 
 export class LocationDetails extends Component {
     render() {
         const {name, inventoryCategories, address, contact} = this.props.warehouseData;
 
         return (
-            <div className="locationDetail">
+            <Link className="locationDetail">
                 <div className="locationDetail__container"> 
                     <div className="locationDetail__info" >
                         <p className="locationDetail__info--bold">{name}</p>
@@ -28,7 +29,7 @@ export class LocationDetails extends Component {
                     </div>
                 </div>
                 <img className="rightArrow" src={rightArrow} alt="right arrow"/>
-            </div>
+            </Link>
         )
     }
 }

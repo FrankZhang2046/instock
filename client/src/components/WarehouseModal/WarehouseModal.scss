@@ -2,6 +2,16 @@
 
 .modal {
     @include modal-window;
+    // position: absolute;
+    // z-index: 1000; 
+
+    // @include tablet {
+    //     position: relative;
+    // }
+
+    // @include desktop {
+    //     position: relative;
+    // }
 
     &--header {
         @include h1-header-mobile;

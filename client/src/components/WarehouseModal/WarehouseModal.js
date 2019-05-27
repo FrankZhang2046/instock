@@ -2,13 +2,14 @@ import React from 'react'
 import './WarehouseModal.scss'
 
 const WarehouseModal = (props) => {
+
     return (
         <div className="modal"
             style={{
-                transform: props.open ? 'translateY(-75vh)' : 'translateY(-135vh)',
+                transform: props.open ? 'translateY(-100vh)' : 'translateY(-200vh)',
                 opacity: props.open ? '1' : '0'
             }}>
-            <div className="modal__container">
+            <form className="modal__container">
                 <h1 className="modal--header">Create New</h1>
                 <div className="modal__inputRow">
                     <div className="modal__inputs">
@@ -62,7 +63,7 @@ const WarehouseModal = (props) => {
                     <button className="modal__buttons__save">SAVE</button>
                     <button className="modal__buttons__cancel" onClick={props.close}>CANCEL</button>
                 </div>
-            </div>
+            </form>
         </div>
     )
 }
