@@ -51,26 +51,11 @@
         }
 
         &__inputField {
-            border: solid 1px #afafaf;
-            border-radius: 4px;
-            height: 48px;
-            padding: 10px 16px;
+            @include modal-input;
         }
 
         &__warehouseInput {
-            border: solid 1px #afafaf;
-            border-radius: 4px;
-            height: 80px;
-            padding: 10px 10px;
-            resize: none;
-
-            @include tablet {
-                width: 480px;
-            }
-
-            @include desktop {
-                width: 480px;
-            }
+            @include modal-textarea;
         }
 
         &__warehouse {
@@ -81,54 +66,7 @@
     }
 
     &__buttons {
-        display: flex;
-        flex-direction: column;
-
-        @include tablet {
-            margin: 40px 0 40px;
-            flex-direction: row-reverse;
-        }
-
-        @include desktop {
-            margin: 40px 0 40px;
-            flex-direction: row-reverse;
-        }
-
-        &__save {
-            margin-bottom: 8px;
-            height: 48px;
-            width: 100%;
-            font-family: 'AvenirNextProLT-demi';
-            color: white;
-            background: $color-brainflix-blue;
-            border: none;
-            border-radius: 4px;
-
-            @include tablet {
-                width: 160px;
-            }
-
-            @include desktop {
-                width: 160px;
-            }
-        }
-
-        &__cancel {
-            height: 48px;
-            width: 100%;
-            font-family: 'AvenirNextProLT-demi';
-            color: $color-brainflix-blue;
-            background: white;
-            border: none;
-
-            @include tablet {
-                width: 160px;
-            }
-
-            @include desktop {
-                width: 160px;
-            }
-        }
+        @include modal-buttons;
     }
 }
 
