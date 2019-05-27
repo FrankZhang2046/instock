@@ -60,6 +60,7 @@
 &__status {
     @include tablet{
         align-self: center;
+        margin-right: 40px;
     }
     &--header{
 
@@ -71,11 +72,13 @@
 
   &__removeButton {
     position: relative;
-    top: 20px;
+    top: -250px;
     float: right;
-
+  
     @include tablet{
         order: 5;
+        top:-40px;
+        margin-left: 20px;
     }
 
     &--popUp-clicked {
@@ -85,6 +88,10 @@
       width: 200px;
       height: 100px;
       border: 1px solid grey;
+
+      @include tablet{
+        top:-10px;
+      }
     }
     &--popUp-folded {
       display: none;
