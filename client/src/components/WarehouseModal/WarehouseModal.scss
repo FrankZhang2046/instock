@@ -4,18 +4,14 @@
     @include modal-window;
 
     &--header {
-        font-family: $font-stack-bold;
-        font-weight: bold;
-        font-size: 24px;
+        @include h1-header-mobile;
 
         @include tablet {
-            font-size: 36px;
-            margin: 56px 0 48px;
+            @include h1-header-tablet;
         }
 
         @include desktop {
-            font-size: 36px;
-            margin: 56px 0 48px;
+            @include h1-header-tablet;
         }
     }
 
@@ -47,6 +43,7 @@
         }
 
         &__label {
+            @include label;
             margin-bottom: 8px;
         }
 
@@ -70,81 +67,10 @@
     }
 }
 
-.backdrop {
+.modalBackground {
         background-color: rgba(0, 0, 0, 0.3);
         position: fixed;
-        top: 0px;
-        transition: all 1.3s;
+        top: 0;
         height: 100%;
         width: 100%;
 }
-
-
-
-// @include tablet {
-//     .modal {
-//         background: white;
-//         border: 1px solid #d0cccc;
-//         box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
-//         margin: 100px auto 0;
-//         transition: all .8s;
-//         width: 576px;
-
-//         &__container {
-//             margin: 80px 48px 60px;
-//         }
-
-//         &--header {
-//             font-family: $font-stack-bold;
-//             font-weight: bold;
-//         }
-
-//         &__inputRow {
-//             display: flex;
-//             flex-direction: row;
-//             justify-content: space-between;
-//         }
-
-//         &__inputs {
-//             display: flex;
-//             flex-direction: column;
-//             width: 220px;
-//             margin-bottom: 24px;
-
-//             &__label {
-//                 margin-bottom: 8px;
-//             }
-
-//             &__inputField {
-//                 border: solid 1px #afafaf;
-//                 border-radius: 4px;
-//                 height: 48px;
-//                 padding: 10px 16px;
-//             }
-
-//             &__warehouseCategory {
-//                 border: solid 1px #afafaf;
-//                 border-radius: 4px;
-//                 height: 80px;
-//                 padding: 10px 10px;
-//             }
-
-//             &--long {
-//                 display: flex;
-//                 flex-direction: column;
-//                 width: 480px;
-//                 margin-bottom: 24px;
-//             }
-//         }
-//     }
-
-//     .backdrop {
-//         background-color: rgba(0, 0, 0, 0.3);
-//         position: fixed;
-//         top: 0px;
-//         transition: all 1.3s;
-//         height: 100%;
-//         width: 100%;
-//     }
-// }
-
