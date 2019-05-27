@@ -16,39 +16,16 @@
     }
 
     &__header {
-        font-size: 24px;
-        margin: 32px 0 16px;
+        @include h1-header-mobile;
 
         @include tablet {
-            font-size: 34px;
-            margin: 48px 0 48px;
-        }
-
-        @include desktop {
-            font-size: 34px;
+            @include h1-header-tablet;
             margin: 48px 0 48px;
         }
     }
 
     &__searchBar {
-        background: url(../../assets/icons/SVG/Icon-search.svg);
-        background-position: 7px 13px;
-        background-repeat: no-repeat;
-        padding: 0 0 0 35px;
-        height: 48px;
-        width: 260px;
-        border-radius: 4px;
-        border: solid 1px #AFAFAF;
-
-        @include tablet {
-            align-self: flex-end;
-            margin-bottom: 48px;
-        }
-
-        @include desktop {
-            align-self: flex-end;
-            margin-bottom: 48px;
-        }
+        @include searchbar;
     }
 }
 
@@ -61,7 +38,6 @@
 
     @include desktop {
         display: flex;
-        justify-content: space-between;
     }
 
     &__warehouse {
@@ -76,5 +52,37 @@
         &__labels {
             width: 50%;
         }
+    }
+}
+
+.pageContainer {
+    position: relative;
+}
+
+.addIcon {
+    background: #0065AD;
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    top: 85vh;
+    left: 75vw;
+    border: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+
+    @include tablet {
+        top: 80vh;
+        left: 85vw;
+        height: 80px;
+        width: 80px;
+    }
+
+    @include desktop {
+        top: 83vh;
+        left: 90vw;
+        height: 80px;
+        width: 80px;
     }
 }

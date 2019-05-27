@@ -1,13 +1,35 @@
-.inventory{
-    &__search{
-        position: relative;
-        width:200px;
-        height: 48px;
-    
-        &--icon{
-            z-index: 1000;
-            position: absolute;
-            top:24px;
+@import '../../styles/scss/master';
+
+a {
+    text-decoration: none;
+    color: $color-black;
+}
+
+.page-header {
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    &__heading {
+        @include h1-header-mobile;
+
+        @include tablet {
+            @include h1-header-tablet;
+            margin: 48px 0 48px;
         }
+    }
+
+    &__searchbar {
+        @include searchbar;
     }
 }
