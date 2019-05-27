@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-// import shortid from 'shortid';
 import ProductItem from './ProductItem';
 import backArrow from '../../assets/icons/SVG/Icon-back-arrow.svg';
 import './products.scss';
@@ -23,11 +22,6 @@ export class ProductView extends Component {
     render() {
 
         const { categories, description, lastOrdered, location, name, quantity, isInstock, warehouseId } = this.props.location.state.test;
-       
-        function currentWarehouse(item) { 
-            if (this.state.warehouse.id === warehouseId)
-            return true
-        }
 
         function search(id, array){
             for (var i = 0; i < array.length; i++) {
