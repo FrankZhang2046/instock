@@ -53,13 +53,14 @@ export class Location extends Component {
                     <LocationDetails 
                         warehouseData={items}
                         key={index} />)
-                }
+                }      
                 <button className="addIcon" onClick={this.openModal}>
                     <img src={addIcon} alt="Add Icon"/>
                 </button>
                 <WarehouseModal 
                     open={this.state.modalShowing}
-                    close={this.closeModal} />
+                    close={this.closeModal}>
+                </WarehouseModal>  
             </div>
         )
     }

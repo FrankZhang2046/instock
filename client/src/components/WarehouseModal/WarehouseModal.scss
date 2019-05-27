@@ -2,16 +2,6 @@
 
 .modal {
     @include modal-window;
-    // position: absolute;
-    // z-index: 1000; 
-
-    // @include tablet {
-    //     position: relative;
-    // }
-
-    // @include desktop {
-    //     position: relative;
-    // }
 
     &--header {
         @include h1-header-mobile;
@@ -80,8 +70,7 @@
 .modalBackground {
         background-color: rgba(0, 0, 0, 0.3);
         position: fixed;
-        top: 0px;
-        transition: all 1.3s;
+        top: 0;
         height: 100%;
         width: 100%;
 }
