@@ -7,7 +7,7 @@ import addIcon from '../../assets/icons/SVG/Icon-add.svg';
 import InventoryModal from '../../components/InventoryModal/InventoryModal';
 
 
-export default class Inventory extends Component{
+export default class Inventory extends Component {
     state = {
         inventory: [],
         modalOpen: false,
@@ -53,7 +53,7 @@ export default class Inventory extends Component{
                 </div>
                 <div className="inventory__items">
                     {this.state.inventory.map(product=>{
-                        return (<Item item={product} removeItem={this.removeItem}/>)
+                        return (<Item key={product.id} item={product} removeItem={this.removeItem}/>)
                     })}
                 </div>
                 <InventoryModal
