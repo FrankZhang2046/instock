@@ -1,37 +1,53 @@
-
-import React, { Component } from 'react'
-// import warehousedata from './data1.js';
-import inventorydata from './data2.js';
-import InventoryData from './InventoryData.js';
-import WarehouseData from './WarehouseData.js';
-// import Inventory from '../../Pages/Inventory/Inventory.js';
-import warehouseData from '../../Pages/location/data.js';
-// import Location from '../LocationDetails/LocationDetails.js';
+import React, { Component } from "react";
+import axios from "axios";
+import InventoryData from "./InventoryData.js";
+import WarehouseData from "./WarehouseData.js";
 
 export class Warehouse extends Component {
+  state = {
+    warehouseData: [],
+    inventoryData: []
+  };
 
-    state = {
-        warehouseData,
-        inventorydata
-    }
+  componentDidMount() {
+    axios.get("http://localhost:8080/warehouse").then(response =>
+      this.setState({
+        warehouseData: response.data
+      })
+    );
+    axios.get("http://localhost:8080/inventory").then(response =>
+      this.setState({
+        inventoryData: response.data
+      })
+    );
+  }
 
   render() {
-console.log(warehouseData)
-console.log(warehouseData[1].id)
-console.log(inventorydata)
+    if (
+      !(
+        this.state.warehouseData.length > 0 &&
+        this.state.inventoryData.length > 0
+      )
+    )
+      return null;
+
+    const { id } = this.props.match.params;
+    const inventories = this.state.inventoryData.filter(
+      item => item.warehouseId === id
+    );
+    console.log(inventories.length);
 
     return (
-      
-      <div>   
-        <WarehouseData warehouseData={this.state.warehouseData.find(items => items.id === 'W0')}/>
-
-        {this.state.inventorydata.map((items, index) => 
-          <InventoryData
-              inventorydata={items}
-              key={index} />) 
-        }      
+      <div>
+        <WarehouseData
+          warehouseData={this.state.warehouseData.find(
+            items => items.id === id
+          )}
+        />
+        {inventories.map(inventory => (
+          <InventoryData inventoryData={inventory} key={inventory.id} />
+        ))}
       </div>
-     
     );
   }
 }

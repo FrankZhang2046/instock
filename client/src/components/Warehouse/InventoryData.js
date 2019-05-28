@@ -5,7 +5,8 @@ import './styles.scss'
 export class InventoryData extends Component {
 
     render() {
-        const { name, description, quantity, lastOrdered, location, isInstock } = this.props.inventorydata;
+        let { name, description, quantity, lastOrdered, location, isInstock } = this.props.inventoryData;
+
         return (
             <div className="product">
             <div className="product__item">ITEM</div>

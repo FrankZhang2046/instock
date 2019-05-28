@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import iconback from "../../assets/icons/SVG/Icon-back-arrow.svg";
-// import Inventory from '../../Pages/Inventory/Inventory.js';
+import { Link } from 'react-router-dom';
 import "./styles.scss";
 
 export class WarehouseData extends Component {
@@ -14,7 +14,7 @@ export class WarehouseData extends Component {
         <p>
           <div className="header__title">
             <div className="header__title--icon">
-              <img src={iconback} alt="iconback" />
+            <Link to="/locations"><img src={iconback} alt="iconback" /></Link>
             </div>
             <div className="header__title--name">{name} </div>
           </div>
