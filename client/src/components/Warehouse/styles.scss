@@ -6,22 +6,11 @@
   }
 }
 
-.header {
-  margin-top: 32px;
+.header1 {
 
-  &__all__place1 {
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-      // justify-items: left;
-    }
+  @include tablet {
+    margin: 32px 24px 16px 16px;
   }
-
-  // &__all__place1, &__all__place2 {
-  //     display: flex;
-  //     flex-direction: row;
-  //     justify-items: left;
-  // }
 
   &__title {
     display: flex;
@@ -29,117 +18,336 @@
     align-items: center;
     font-size: 1.9rem;
     font-weight: bold;
-    margin: 0 16px;
+    margin: 32px 16px;
+
+    @include tablet {
+      font-size: 2.3rem;
+    }
 
     &--icon {
       margin-right: 16px;
     }
+
+    &--border {
+      @include tablet {
+        border-bottom: 1px solid silver;
+        margin-top: 32px;
+      }
+    }
+
   }
 
-  &__address,
-  &__contact {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: grey;
-    margin: 0 16px;
-  }
+  
 
-  &__street,
-  &__number,
-  &__city,
-  &__phone,
-  &__email,
-  &__name,
-  &__position,
-  &__postal {
-    font-size: 0.9rem;
-    margin: 0 16px;
-  }
+} 
 
-  &__email {
-    margin-bottom: 32px;
-  }
-}
-// &__border {
-//     border-bottom: 2px solid pink;
-//     margin: 32px 16px;
-// }
+.header2 {
 
-// &__all {
-//     // @include tablet {
-//     // display: flex;
-//     // flex-direction: row;
-
-//     // }
-//     &__place1, &__place2 {
-
-//         @include tablet {
-//             display: flex;
-//             flex-direction: column;
-
-//         }
-// }
-
-// }
-
-// .header__all {
-
-// //     @include tablet {
-// //         // position: relative;
-// //         display: flex;
-// //         flex-direction: row;
-
-// //     }
-// @include tablet {
-//     &__place2 {
-
-//             // position: relative;
-//             margin-left: 400px;
-//             margin-top: -138px;
-
-//         }
-//     }
-// }
-
-// }
-
-.product {
-  padding-top: 16px;
-  background-color: $color-alabaster;
-
-  &__title {
+  @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 0 16px;
-    font-size: 1.3rem;
-    font-weight: bold;
+  }
+  
+  @include tablet {
+    margin-bottom: 48px;
   }
 
-  &__order,
-  &__quantity,
-  &__item,
-  &__status,
-  &__location {
+  &__address1,
+  &__contact1 {
     font-size: 0.9rem;
     font-weight: bold;
     color: grey;
+    margin: 32px 16px 16px 16px;
+
+    @include tablet {
+      font-size: 1.1rem;
+      margin: 16px 24px 16px 24px;
+    }
+  }
+
+  &__address2,
+  &__address3,
+  &__address5,
+  &__contact2,
+  &__contact3, 
+  &__contact5 {
+      font-size: 0.9rem;
+      margin: 0 16px;
+
+      @include tablet {
+        font-size: 1.3rem;
+        margin: 0px 24px 0px 24px;
+      }
+  }
+
+  &__address3,
+  &__address5,
+  &__contact3,
+  &__contact5 {
+    margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 1.3rem;
+      font-style: italic;
+      margin: 0px 24px 24px 24px;
+    }
+  }
+  &__address4, 
+  &__contact4 {
+    font-size: 0.9rem;
     margin: 0 16px;
+
+    @include tablet {
+      font-size: 1.3rem;
+      margin: 0px 24px 0px 24px;
+      font-style: italic;
+    }
+  }
+}
+
+.product {
+  background-color: $color-alabaster;
+}
+.product1 {
+  padding-top: 16px;
+  background-color: $color-alabaster;
+
+  // &__description, &__name {
+  //   @include tablet() {
+  //     padding: 0;
+  //     }
+  //   }
+  
+  &__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px;
+  font-size: 1rem;
+  font-weight: bold;
+
+  &--icon {
+    @include tablet {
+    display: none;
+    }
+  }
+
+  &--title {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &--item {
+    font-size: 0.9rem;
+  font-weight: bold;
+  color: grey;
+  margin: 8px 0px 16px 0;
+
+    @include tablet {
+     display: none;
+    }
+  }
+
+  }
+  }
+
+  .order__title {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      // justify-content: space-between;
+      font-size: 0.9rem;
+      // margin: 0px 24px;
+     
+     &--order1,  &--location1 {
+      //  margin-left: 186px;
+       margin-right: 32px;
+     }
+
+     &--quantity1 {
+       margin-left: 10px;
+       margin-right: 32px;
+     }
+    
+     &--item1 {
+      margin-left: 24px;
+      margin-right: 216px;
+
+     }
+
+    //  &__status1 {
+    //   margin-right: 24px;
+    //  }
+
+    }
+
+   }
+
+  
+  .product2 {
+
+    &__date {
+    
+      @include tablet {
+        // margin-right: 484px;
+        
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid silver;
+      // margin-bottom: 24px;
+      // justify-content: space-around;
+      // padding-right: 40px
+      // margin-left: 8px;
+      }
+
+    &__border {
+      border-bottom: 1px solid silver;
+      margin: 16px 16px 0 16px;
+
+      @include tablet {
+        margin: 0 24px;
+      }
+      }
+
+    &__icon1 {
+      display: none;
+
+      @include tablet {
+        display: flex;
+       align-items: flex-start;
+       
+       margin-left: 36px;
+      //  margin-right: 24px;
+      }
+    }
+
+  &__header {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: grey;
+  margin: 16px 16px;
+
+  @include tablet {
+    display: none;
+  }
   }
 
   &__description,
-  &__order--date,
-  &__available,
-  &__location1,
-  &__info {
-    font-size: 1rem;
-    margin: 0 16px 24px 16px;
+  &__name,
+  &__date {
+  font-size: 1rem;
+  margin: 0px 16px 0 16px;
+
+  @include tablet {
+    font-size: 0.9rem;
+    margin: 0px 16px 0 24px;
+    // padding-right: 10px
+    }
   }
 
-  &__border {
-    border-bottom: 1px solid silver;
-    margin: 0 16px;
-    margin-bottom: 24px;
+  &__status {
+    font-size: 1rem;
+    margin: 0px 16px 0 16px;
+  
+    @include tablet {
+      font-size: 0.9rem;
+      margin: 0px 16px 0 16px;
+      // padding-left: 6px
+    }
   }
-}
+
+  &__location {
+    margin: 0px 0px 0 16px;
+
+    @include tablet {
+      font-size: 0.9rem;
+      margin-left: 50px;
+      width: 10%;
+      // justify-content: left;
+      
+      
+    // margin-left: 48px;
+    }
+  }
+
+ &__available {
+  margin: 0px 0px 0 16px;
+
+  @include tablet {
+    font-size: 0.9rem;
+    margin-left: 18px;
+    margin-right: 52px;
+    padding-left: 30px
+  }
+
+  // &__icon
+  // {
+
+  //   @include tablet {
+  //     font-size: 0.9rem;
+  //     margin-left: 100px;
+  //   }
+  // }
+
+ 
+
+  // &__description,
+  // &__name {
+  //   @include tablet {
+  //     margin-left: 24px;
+  //     // padding: 0px;
+  //   }
+  // }
+ }
+
+//  &__iconstatus {
+//   @include tablet {
+//     display: flex;
+//     flex-direction: row;
+//     // justify-content: space-evenly;
+//   }
+
+//  }
+
+  &__namedesc {
+    @include tablet() {
+      flex-wrap: wrap;
+      width: 33%;
+      margin-bottom: 24px;
+    }
+  }
+
+  }
+
+  // &__border {
+  // border-bottom: 1px solid black;
+  // margin: 0 16px;
+  // }
+
+
+
+  // @include tablet {
+  //   display: none;
+  // }
+
+  // }
+  
+  
+  
+  // &__border {
+  // border-bottom: 1px solid silver;
+  // margin: 0 16px;
+  // // margin-bottom: 24px;
+  // }
+  // }
+  

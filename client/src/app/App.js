@@ -12,9 +12,9 @@ function App() {
       <BrowserRouter>
           <NavBar />
           <Switch>
-            <Route exact path="/warehouse/:id" component={Warehouse} />
-            <Inventory exact path="/inventory"/>
             <Location exact path="/locations"/> 
+            <Inventory exact path="/inventory"/>
+            <Route exact path="/warehouse/:id" component={Warehouse} />  
             <Route exact path="/inventory/:id" render={(props)=><ProductView {...props}/>} />
             <Redirect exact to="/inventory" from="/" />
           </Switch>

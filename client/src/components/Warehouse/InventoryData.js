@@ -5,34 +5,38 @@ import './styles.scss'
 export class InventoryData extends Component {
 
     render() {
-        let { name, description, quantity, lastOrdered, location, isInstock } = this.props.inventoryData;
-
+        const { name, description, quantity, lastOrdered, location, isInstock } = this.props.inventoryData;
+        const status = isInstock.toString();
+        
         return (
             <div className="product">
-            <div className="product__item">ITEM</div>
-                <p><div className="product__title"> 
-                <div className="product__title--name">{name} </div> 
-                    <div className="product__title--icon">    
-                        <img src={kebab} alt="iconkebab"/> </div>            
+                <div className="product1">
+                    <div className="product1__title"> 
+                        <div className="product1__title--item">ITEM</div>
+                        <div className="product1__title--icon">    
+                            <img src={kebab} alt="iconkebab"/></div> 
                 </div>
-                </p>
-                <p><div className="product__description">{description}</div></p>
-                <p><div className="product__order">LAST ORDERED</div></p>
-                <p><div className="product__order--date">{lastOrdered}</div>
-                    
-                </p>
-                
-                <div className="product__location"><p>LOCATION</p></div> 
-                    <p><div className="product__location1">{location}</div></p>
-            
-                <div className="product__quantity"><p>QUANTITY</p></div>
-                <div className="product__available"><p>{quantity}</p></div>
-                
-                <p><div className="product__status">STATUS</div>
-                    <div className="product__info">{isInstock}</div> 
-                </p>
-                    <div className="product__border"></div>
-
+                <div className="product2">
+                    <div className="product2__namedesc">
+                    <div className="product2__name">{name} </div> 
+                                    
+                        <div className="product2__description">{description}</div>
+                        </div>
+                        <div className="product2__header">LAST ORDERED</div>
+                        <div className="product2__date">{lastOrdered}</div>
+                        <div className="product2__header">LOCATION</div> 
+                        <div className="product2__location">{location}</div>
+                        <div className="product2__header">QUANTITY</div>
+                        <div className="product2__available">{quantity}</div>
+                        <div className="product2__header">STATUS</div>
+                        <div className="product2__status">{status}</div>
+                        <div className="product2__icon1">    
+                                <img src={kebab} alt="iconkebab"/></div>
+                            <div className="product2__border"></div> 
+                </div>
+            </div>
+          
+               
             </div>
         )
     }
