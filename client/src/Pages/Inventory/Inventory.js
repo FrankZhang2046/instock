@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Item from '../../components/Item/Item.js';
-import searchIcon from '../../assets/icons/SVG/Icon-search.svg';
 import axios from 'axios';
 import './styles.scss';
 import addIcon from '../../assets/icons/SVG/Icon-add.svg';
