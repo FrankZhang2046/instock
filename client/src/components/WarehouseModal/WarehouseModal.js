@@ -2,12 +2,22 @@ import React, { Component } from 'react'
 import './WarehouseModal.scss'
 
 export class WarehouseModal extends Component {
+
+    
+    // submitWarehouse = (e) => {
+    //     e.preventDefault();
+    //         axios.get('http://localhost:8080/warehouse'), {
+
+    //         }
+    // }
+
+
     render() {
         return (
             <div className="modal"
                 style={{
-                    transform: this.props.open ? 'translateY(-50vh)' : 'translateY(-400vh)',
-                    opacity: this.props.open ? '1' : '0'
+                    transform: this.props.open ? 'translateY(-75vh)' : 'translateY(-500vh)',
+                    opacity: this.props.close ? '1' : '0'
                 }}>
                 <form className="modal__container">
                     <h1 className="modal--header">Create New</h1>
@@ -57,10 +67,10 @@ export class WarehouseModal extends Component {
                         <label className="modal__inputs__label">
                             Inventory Categories
                         </label>
-                        <textarea className="modal__inputs__warehouseInput" required placeholder="Categories" />
+                        <textarea className="modal__inputs__warehouseInput" placeholder="Categories" />
                     </div>
                     <div className="modal__buttons">
-                        <button className="modal__buttons__save">SAVE</button>
+                        <button className="modal__buttons__save" >SAVE</button>
                         <button className="modal__buttons__cancel" onClick={this.props.close}>CANCEL</button>
                     </div>
                 </form>
