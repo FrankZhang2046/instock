@@ -26,8 +26,13 @@ export default class Inventory extends Component {
 
     removeItem = (id) =>{
         const filteredArray = this.state.inventory.filter(item => {return item.id !== id});
-        
+        axios
+            .delete(`http://localhost:8080/inventory/${id}`)
+            .then(() => {
+            console.log("deleted")
+        })
         this.setState({inventory: filteredArray});
+        
     }
 
     openModal = () => {

@@ -32,8 +32,7 @@ export class ProductView extends Component {
                 }
             }
         }
-        const toggle = this.props.isInstock? "product-page__instock" : "product-page__outofstock";
-
+        const toggle = isInstock ? "product-page__instock" : "product-page__outofstock";
 
         return (
             this.state.warehouse.length > 1 ?
@@ -47,9 +46,8 @@ export class ProductView extends Component {
                             {name}
                         </h1>
                     </div>
-                    <h5 
-                    className={`${toggle} + product-page__headings--instock`}>
-                        {this.props.isInstock? "In Stock" : "Out of Stock"}
+                    <h5 className={`${toggle} product-page__headings--instock`}>
+                        {isInstock? "In Stock" : "Out of Stock"}
                     </h5>
                 </div>
                 <ProductItem 
