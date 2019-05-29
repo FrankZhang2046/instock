@@ -6,6 +6,7 @@ a {
 }
 
 .page-header {
+    margin-left: 16px;
     @include tablet {
         display: flex;
         flex-direction: row;
@@ -31,5 +32,10 @@ a {
 
     &__searchbar {
         @include searchbar;
+    }
+}
+
+.inventory{
+    &__container{
     }
 }
