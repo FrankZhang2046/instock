@@ -77,13 +77,12 @@ export default class InventoryModal extends Component {
 
     render() {
         return (
-            <div className="modal-wrapper">
+            <div className="modal-wrapper"
+            style={{
+                display: this.props.open ? 'block' : 'none',
+                opacity: this.props.close ? '1' : '0' }} >
                 <div
-                    className="inventoryModal"
-                    style={{
-                        display: this.props.open ? 'block' : 'none',
-                        opacity: this.props.close ? '1' : '0' 
-                        }} >
+                    className="inventoryModal" >
                     <div className="inventoryModal__container">
                         <h1 className="inventoryModal__header">Create New</h1>
                         <form 

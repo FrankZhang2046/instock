@@ -25,11 +25,16 @@
 .inventoryModal {
     
     @media (max-width: 20rem) {
+        @include modal-window;
         position: absolute;
         top: 0;
     }
 
-    @include modal-window;
+    @include tablet {
+        @include modal-window;
+        margin-top: 7rem;
+    }
+
 
     &__header {
         @include h1-header-tablet;
