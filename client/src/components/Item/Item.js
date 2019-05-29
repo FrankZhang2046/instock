@@ -21,12 +21,10 @@ class Item extends Component{
         const {id, name, description, lastOrdered, location, quantity, isInstock} = this.props.item;
 
         return(
+            <>
             <Link to={{pathname:`/inventory/${id}`, state:{test: this.props.item}}}>
             <div className="item__container">
-                <div className="item__removeButton">
-                    <img ref={this.dottedButton} className="item__removeButton" src={dottedMenu} alt="" onClick={()=>{(this.toggleButton())}}/>
-                    <div className={this.state.toggled===false? 'item__removeButton--popUp-folded' : 'item__removeButton--popUp-clicked'} onClick={()=>this.clickHandler(id)}>Remove</div>
-                </div>
+               
                     <h4 className="item__header">ITEM</h4>
                 <div className="item__description">
                     <h2 className="item__description--header">{name}</h2>
@@ -50,6 +48,11 @@ class Item extends Component{
                 </div>
             </div>
             </Link>
+                <div className="item__removeButton">
+                    <img ref={this.dottedButton} className="item__removeButton" src={dottedMenu} alt="" onClick={()=>{(this.toggleButton())}}/>
+                    <div className={this.state.toggled===false? 'item__removeButton--popUp-folded' : 'item__removeButton--popUp-clicked'} onClick={()=>this.clickHandler(id)}>Remove</div>
+                </div>
+            </>
         )
     }
 }
