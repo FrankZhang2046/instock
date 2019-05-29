@@ -23,7 +23,10 @@
     }
 
     &__headings--instock {
-        margin-left: 1.5rem;
+        
+        @include tablet {
+            margin-left: 1.5rem;
+        }
     }
 
     &__upper-container {
