@@ -27,7 +27,21 @@ const postInventory = (req, res) => {
     res.json(newInventoryItem);
 }
 
+router.delete('inventory/:id', (req, res) => {
+    // const deleteItem = inventoryData.filter(item => {
+    //   return item.id !== req.params.id
+    // })
+    // if (deleteItem) {
+    //   inventory.splice(deleteItem, 1)
+    //   res.send('Item deleted.')
+    // } else {
+    //   res.status(400).send('Item not found.')
+    // }
+    res.json(req.body)
+  })
+
 router.get('/', retrieveInventory);
 router.post('/', postInventory)
+// router.delete('/inventory')
 
 module.exports = router;
