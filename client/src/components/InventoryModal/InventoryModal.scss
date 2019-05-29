@@ -60,3 +60,13 @@
 .react-switch-handle {
     outline: none;
 }
+
+.formError {
+    color: #D8000C;
+    @include h4-lists-contactInfo;
+}
+
+.formSuccess {
+    color: #7AAE3B;
+    @include h4-lists-contactInfo;
+}
