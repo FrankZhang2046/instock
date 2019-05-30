@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './LocationDetails.scss';
 import rightArrow from '../../assets/icons/SVG/Icon-arrow-right.svg';
-import { Link } from 'react-router-dom'; // *** NEED WAREHOUSE INVENTORY LIST TO COMPLETE LINK ***
+import { Link } from 'react-router-dom'; 
 
 export class LocationDetails extends Component {
     render() {

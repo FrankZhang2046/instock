@@ -8,19 +8,12 @@ const getWarehouse = (req, res) => {
 }
 
 const createWarehouse = (req, res) => {
-    const { name, inventoryCategories } = req.body;
-    const { street, suiteNum, city, province, postal } = req.body.address;
-    const { title, phone, email } = req.body.contact;
-
+    const { name, inventoryCategories, street, title, phone, email } = req.body;
     const newWarehouse = {
         id: shortId.generate(),
         name,
         address: {
             street,
-            suiteNum,
-            city,
-            province,
-            postal
         },
         contact: {
             name,
