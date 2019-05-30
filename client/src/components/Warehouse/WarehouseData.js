@@ -14,7 +14,7 @@ export class WarehouseData extends Component {
         <div className="header1">
           <div className="header1__title">
             <div className="header1__title--icon">
-              <Link to="/locations">
+              <Link to="/warehouses">
                 <img src={iconback} alt="iconback" />
               </Link>
             </div>
