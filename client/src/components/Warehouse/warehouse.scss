@@ -1,0 +1,375 @@
+@import "../../styles/scss//master";
+
+.header1 {
+  @include tablet {
+    margin: 32px 24px 16px 16px;
+
+    @include desktop {
+      margin: 60px 180px 16px 180px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin: 32px 16px;
+
+    @include tablet {
+      font-size: 2.3rem;
+    }
+
+    @include desktop {
+      font-size: 3.3rem;
+    }
+
+    &--icon {
+      margin-right: 16px;
+    }
+
+    &--border {
+      @include tablet {
+        border-bottom: 1px solid silver;
+        margin-top: 32px;
+      }
+
+      @include desktop {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+
+.header2 {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+
+    @include desktop {
+      margin-left: 180px;
+    }
+
+    &__contact {
+      margin-left: 142px;
+
+      @include tablet {
+        margin-bottom: 48px;
+      }
+
+      @include desktop {
+        margin-left: 380px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__address1,
+  &__contact1 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: grey;
+    margin: 32px 16px 16px 16px;
+
+    @include tablet {
+      font-size: 1.1rem;
+      margin: 16px 24px 16px 24px;
+    }
+  }
+
+  &__address2,
+  &__address3,
+  &__address5,
+  &__contact2,
+  &__contact3,
+  &__contact5 {
+    font-size: 0.9rem;
+    margin: 0 16px;
+
+    @include tablet {
+      font-size: 1.3rem;
+      margin: 0px 24px 0px 24px;
+    }
+  }
+
+  &__address3,
+  &__address5,
+  &__contact3,
+  &__contact5 {
+    margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 1.3rem;
+      font-style: italic;
+      margin: 0px 24px 24px 24px;
+
+      @include desktop {
+        margin-bottom: 32px;
+      }
+    }
+  }
+  &__address4,
+  &__contact4 {
+    font-size: 0.9rem;
+    margin: 0 16px;
+
+    @include tablet {
+      font-size: 1.3rem;
+      margin: 0px 24px 0px 24px;
+      font-style: italic;
+    }
+  }
+}
+
+.product {
+  background-color: $color-alabaster;
+}
+.product1 {
+  padding-top: 16px;
+  background-color: $color-alabaster;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    &--icon {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--title {
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &--item {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: grey;
+      margin: 8px 0px 16px 0;
+
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+.order__title {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: grey;
+    background-color: $color-alabaster;
+    padding-top: 32px;
+
+    &--order1 {
+      margin-right: 8px;
+      width: 80%;
+
+      @include desktop {
+        width: 76%;
+      }
+    }
+
+    &--location1 {
+      margin-right: 28px;
+      width: 60%;
+
+      @include desktop {
+        width: 94%;
+        margin-left: 20px;
+      }
+    }
+
+    &--quantity1 {
+      width: 72%;
+
+      @include desktop {
+        width: 174%;
+        margin-left: -60px;
+      }
+    }
+
+    &--status1 {
+      width: 96%;
+
+      @include desktop {
+        margin-left: -170px;
+        width: 250%;
+      }
+    }
+
+    &--item1 {
+      margin-left: 24px;
+      width: 142%;
+
+      @include desktop {
+        margin-left: 204px;
+        width: 288%;
+      }
+    }
+  }
+}
+
+.product2 {
+  @include desktop {
+    margin-left: 180px;
+    margin-right: 166px;
+  }
+
+  &__details,
+  &__namedesc,
+  &__icon1 {
+    @include tablet {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__date {
+    margin: 24px 16px 0 16px;
+
+    @include tablet {
+      font-size: 0.9rem;
+      margin: 0px 40px 0px 16px;
+      width: 15%;
+    }
+
+    @include desktop {
+      margin-right: 58px;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid silver;
+  }
+
+  &__header {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: grey;
+    margin: 16px 16px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__namedesc--name {
+    font-size: 1rem;
+    margin: 0px 16px;
+    font-weight: bold;
+
+    @include tablet {
+      font-size: 1rem;
+      margin: 0px 164px 0px 24px;
+      width: 120%;
+      font-weight: bold;
+    }
+  }
+
+  &__status {
+    font-size: 1rem;
+    margin: 0px 16px 0 16px;
+
+    @include tablet {
+      font-size: 0.9rem;
+      margin: 0px 16px 0 16px;
+      width: 2%;
+    }
+
+    @include desktop {
+      margin-right: 26px;
+    }
+  }
+
+  &__location {
+    margin: 0px 0px 0 16px;
+
+    @include tablet {
+      font-size: 0.9rem;
+      width: 25%;
+
+      @include desktop {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &__available {
+    margin: 0px 0px 0 16px;
+
+    @include tablet {
+      font-size: 0.9rem;
+      margin-right: 74px;
+
+      @include desktop {
+        margin-right: 68px;
+      }
+    }
+  }
+
+  &__namedesc {
+    @include tablet {
+      width: 30%;
+
+      @include desktop {
+        width: 45%;
+      }
+    }
+  }
+
+  &__namedesc--description {
+    margin: 16px 16px;
+    font-size: 0.9rem;
+
+    @include tablet {
+      position: relative;
+      margin-left: 24px;
+      width: 90%;
+    }
+  }
+
+  &__border {
+    border-bottom: 1px solid silver;
+    margin: 16px 16px 0 16px;
+
+    @include tablet {
+      margin: 0 24px;
+    }
+  }
+
+  &__icon1 {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      align-items: flex-start;
+      margin-left: 36px;
+
+      @include desktop {
+        margin-left: 126px;
+      }
+    }
+  }
+}

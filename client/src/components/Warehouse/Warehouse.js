@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import InventoryData from "./InventoryData.js";
 import WarehouseData from "./WarehouseData.js";
-import './styles.scss'
+import "./warehouse.scss";
 
 export class Warehouse extends Component {
   state = {
@@ -45,11 +45,11 @@ export class Warehouse extends Component {
           )}
         />
         <div className="order__title">
-        <div className="order__title--item1">ITEM</div>
-        <div className="order__title--order1">LAST ORDERED</div>
-        <div className="order__title--location1">LOCATION</div>
-        <div className="order__title--quantity1">QUANTITY</div>
-        <div className="order__title--status1">STATUS</div>
+          <div className="order__title--item1">ITEM</div>
+          <div className="order__title--order1">LAST ORDERED</div>
+          <div className="order__title--location1">LOCATION</div>
+          <div className="order__title--quantity1">QUANTITY</div>
+          <div className="order__title--status1">STATUS</div>
         </div>
         {inventories.map(inventory => (
           <InventoryData inventoryData={inventory} key={inventory.id} />
