@@ -5,11 +5,36 @@
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: rgba($color: #000000, $alpha: 0.3)
+    background-color: rgba($color: #000000, $alpha: 0.3);
+}
+
+.modal-wrapper {
+
+    @include tablet {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 .inventoryModal {
-    @include modal-window;
+    
+    @media (max-width: 20rem) {
+        @include modal-window;
+        position: absolute;
+        top: 0;
+    }
+
+    @include tablet {
+        @include modal-window;
+        margin-top: 7rem;
+    }
+
 
     &__header {
         @include h1-header-tablet;
@@ -50,6 +75,11 @@
 
     &__buttons {
         @include modal-buttons;
+
+        & > button {
+            outline: none;
+            cursor: pointer;
+        }
     }
 }
 
@@ -70,3 +100,4 @@
     color: #7AAE3B;
     @include h4-lists-contactInfo;
 }
+
