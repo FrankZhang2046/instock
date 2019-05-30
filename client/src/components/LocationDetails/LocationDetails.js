@@ -8,7 +8,7 @@ export class LocationDetails extends Component {
         const {name, inventoryCategories, address, contact, id} = this.props.warehouseData;
 
         return (
-            <Link className="locationDetail" to={`/warehouse/${id}`}>
+            <Link className="locationDetail" to={`/warehouses/${id}`}>
                 <div className="locationDetail__container"> 
                     <div className="locationDetail__info" >
                         <p className="locationDetail__info--bold">{name}</p>
