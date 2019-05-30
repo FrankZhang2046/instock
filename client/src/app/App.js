@@ -16,7 +16,6 @@ function App() {
             <Inventory exact path="/inventory"/>
             <Route exact path="/warehouse/:id" component={Warehouse} />  
             <Redirect exact to="/warehouse" from="/" />
-            {/* <Route exact path="/inventory/:id" component={Inventory} />   */}
             <Route exact path="/inventory/:id" render={(props)=><ProductView {...props}/>} />
           </Switch>
       </BrowserRouter>
