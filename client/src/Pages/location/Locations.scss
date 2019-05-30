@@ -42,6 +42,7 @@
 
     &__warehouse {
         width: 210px;
+        color: $color-silver;
     }
 
     &__info {
@@ -51,12 +52,23 @@
 
         &__labels {
             width: 50%;
+            color: $color-silver;
         }
     }
 }
 
 .pageContainer {
     position: relative;
+
+    margin: 0 16px 0;
+
+    @include tablet {
+        margin: 0 24px 0;
+    }
+
+    @include desktop {
+        margin: 0 180px 0;
+    }
 }
 
 .addIcon {

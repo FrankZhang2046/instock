@@ -2,6 +2,19 @@
 
 .modal {
     @include modal-window;
+    position: absolute;
+    top: 377px;
+    left: -16px;
+
+    @include tablet {
+        position: relative;
+        top: -110vh;
+    }
+    
+    @include desktop {
+        position: relative;
+        top: -10vh;
+    }
 
     &--header {
         @include h1-header-mobile;
@@ -73,4 +86,5 @@
         top: 0;
         height: 100%;
         width: 100%;
+        left: 0px;
 }
