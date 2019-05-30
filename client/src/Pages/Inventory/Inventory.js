@@ -12,10 +12,15 @@ export default class Inventory extends Component {
         modalOpen: false,
     }
     
-    componentDidMount(){
+    getInventory = () => {
         axios.get(`http://localhost:8080/inventory`)
-            .then(result => this.setState({inventory: result.data})
+            .then(result => 
+                this.setState({inventory: result.data})
             )
+    }
+
+    componentDidMount(){ 
+        this.getInventory();
     }
 
     componentDidUpdate(){
@@ -24,12 +29,12 @@ export default class Inventory extends Component {
         }
     }
 
-    removeItem = (id) =>{
+    removeItem = (id) => {
         const filteredArray = this.state.inventory.filter(item => {return item.id !== id});
         axios
             .delete(`http://localhost:8080/inventory/${id}`)
             .then(() => {
-            console.log("deleted")
+                this.getInventory();
         })
         this.setState({inventory: filteredArray});
         
