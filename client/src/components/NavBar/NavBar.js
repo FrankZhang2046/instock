@@ -14,14 +14,14 @@ export class NavBar extends Component {
                 <nav>
                     <div className="nav">
                         <div className="nav__wrapper">
-                            <Link to="/locations" className="nav__logo-link">
+                            <Link to="/warehouse" className="nav__logo-link">
                                 <img src={logo} alt="BandSite logo" className="nav__logo" />
                             </Link>
                             <ul className="nav__links">
                                 <NavLink activeClassName='is-active' to="/inventory">
                                     <li className="nav__links-inv" >Inventory</li>
                                 </NavLink>
-                                <NavLink activeClassName='is-active' to="/locations">
+                                <NavLink activeClassName='is-active' to="/warehouse">
                                     <li className="nav__links-loc" >Locations</li>
                                 </NavLink>
                             </ul>

@@ -11,14 +11,13 @@ function App() {
   return (
       <BrowserRouter>
           <NavBar />
-          <Switch>
+          <Switch> 
             <Location exact path="/warehouse"/> 
             <Inventory exact path="/inventory"/>
             <Route exact path="/warehouse/:id" component={Warehouse} />  
-            <Route exact path="/inventory/:id" component={Inventory} />  
-            {/* <Route exact path="/" component={Location} />   */}
+            <Redirect exact to="/warehouse" from="/" />
+            {/* <Route exact path="/inventory/:id" component={Inventory} />   */}
             <Route exact path="/inventory/:id" render={(props)=><ProductView {...props}/>} />
-            <Redirect exact to="/locations" from="/" />
           </Switch>
       </BrowserRouter>
   );
