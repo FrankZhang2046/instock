@@ -1,25 +1,33 @@
 const express = require('express');
 const router = express.Router();
 const warehouseData = require('../data/warehouses.json');
+const shortId = require('shortid');
 
 const getWarehouse = (req, res) => {
     res.json(warehouseData)
 }
 
-const getSingleWarehouse = (req, res) => {
-    // search for a single warehouse
-    const foundWarehouse = warehouseData.find(warehouse => warehouse.id === req.params.id);
-
-    //respond with message if not found?
-    if (!foundWarehouse) {
-        res.status(404).json({ error: 'A warehouse with that ID does not exist' });
+const createWarehouse = (req, res) => {
+    const { name, inventoryCategories, street, title, phone, email } = req.body;
+    const newWarehouse = {
+        id: shortId.generate(),
+        name,
+        address: {
+            street,
+        },
+        contact: {
+            name,
+            title,
+            phone,
+            email
+        },
+        inventoryCategories
     }
-
-    // respond when a warehouse is found with a unique ID
-    // res.json(foundWarehouse);
+    warehouseData.push(newWarehouse);
+    res.json(newW2arehouse);
 }
 
 router.get('/', getWarehouse);
-router.get('/:id', getSingleWarehouse);
+router.post('/', createWarehouse);
 
 module.exports = router;

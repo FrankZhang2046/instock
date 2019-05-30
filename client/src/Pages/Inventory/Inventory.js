@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Item from '../../components/Item/Item.js';
-import searchIcon from '../../assets/icons/SVG/Icon-search.svg';
 import axios from 'axios';
 import './styles.scss';
 import addIcon from '../../assets/icons/SVG/Icon-add.svg';
@@ -27,8 +26,13 @@ export default class Inventory extends Component {
 
     removeItem = (id) =>{
         const filteredArray = this.state.inventory.filter(item => {return item.id !== id});
-        
+        axios
+            .delete(`http://localhost:8080/inventory/${id}`)
+            .then(() => {
+            console.log("deleted")
+        })
         this.setState({inventory: filteredArray});
+        
     }
 
     openModal = () => {

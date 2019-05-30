@@ -14,9 +14,9 @@ function App() {
           <Switch> 
             <Location exact path="/warehouse"/> 
             <Inventory exact path="/inventory"/>
-            <Route exact path="/warehouse/:id" component={Warehouse} />  
-            <Redirect exact to="/warehouse" from="/" />
+            <Location exact path="/warehouses"/> 
             <Route exact path="/inventory/:id" render={(props)=><ProductView {...props}/>} />
+            <Redirect exact to="/warehouses" from="/" />
           </Switch>
       </BrowserRouter>
   );

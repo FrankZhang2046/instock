@@ -21,7 +21,7 @@ export class NavBar extends Component {
                                 <NavLink activeClassName='is-active' to="/inventory">
                                     <li className="nav__links-inv" >Inventory</li>
                                 </NavLink>
-                                <NavLink activeClassName='is-active' to="/warehouse">
+                                <NavLink activeClassName='is-active' to="/warehouses">
                                     <li className="nav__links-loc" >Locations</li>
                                 </NavLink>
                             </ul>
