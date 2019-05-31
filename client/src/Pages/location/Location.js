@@ -20,6 +20,7 @@ export class Location extends Component {
 
     // Sets state for modalShowing to true when Modal opens
     openModal = () => {
+        window.scrollTo(0, 0);
         this.setState({
             modalShowing: true
         });
