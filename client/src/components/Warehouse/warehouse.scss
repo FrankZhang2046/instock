@@ -23,7 +23,6 @@
 
     @include desktop {
       font-size: 3.3rem;
-      // margin-bottom: 48px;
     }
 
     &--icon {
@@ -32,7 +31,7 @@
 
     &--border {
       @include tablet {
-        border-bottom: 1px solid silver;
+        border-bottom: 1px solid $color-silver;
         margin-top: 32px;
       }
 
@@ -69,7 +68,7 @@
   &__contact1 {
     font-size: 0.9rem;
     font-weight: bold;
-    color: grey;
+    color: $color-grey;
     margin: 32px 16px 16px 16px;
 
     @include tablet {
@@ -154,7 +153,7 @@
     &--item {
       font-size: 0.9rem;
       font-weight: bold;
-      color: grey;
+      color: $color-grey;
       margin: 8px 0px 16px 0;
 
       @include tablet {
@@ -176,7 +175,7 @@
     flex-direction: row;
     font-size: 0.9rem;
     font-weight: bold;
-    color: grey;
+    color: $color-grey;
     background-color: $color-alabaster;
     padding-top: 32px;
     &--order1 {
@@ -260,13 +259,13 @@
   @include tablet {
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid $color-silver;
   }
 
   &__header {
     font-size: 0.9rem;
     font-weight: bold;
-    color: grey;
+    color: $color-grey;
     margin: 16px 16px;
 
     @include tablet {
@@ -348,7 +347,7 @@
   }
 
   &__border {
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid $color-silver;
     margin: 16px 16px 0 16px;
 
     @include tablet {
