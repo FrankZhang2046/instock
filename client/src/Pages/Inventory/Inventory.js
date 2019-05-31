@@ -55,6 +55,13 @@ export default class Inventory extends Component {
                     <h1 className="page-header__heading">Inventory</h1>
                     <input type="text" className="page-header__searchbar" placeholder="search"/>
                 </div>
+                <div className="inventory__header">
+                    <div className="inventory__header--content-item">ITEM</div>
+                    <div className="inventory__header--content-lastOrdered">LAST ORDERED</div>
+                    <div className="inventory__header--content-location">LOCATION</div>
+                    <div className="inventory__header--content-quantity">QUANTITY</div>
+                    <div className="inventory__header--content-status">STATUS</div>
+                </div>
                 <div className="inventory__items">
                     {this.state.inventory.map(product=>{
                         return (<Item key={product.id} item={product} removeItem={this.removeItem}/>)
