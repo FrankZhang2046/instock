@@ -5,9 +5,8 @@ import "./warehouse.scss";
 
 export class WarehouseData extends Component {
   render() {
+    
     const { name, address, contact } = this.props.warehouseData;
-
-    console.log(this.props.warehouseData);
 
     return (
       <div className="header">
