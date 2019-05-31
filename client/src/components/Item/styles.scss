@@ -99,11 +99,18 @@
     }
 
     &--popUp-clicked {
+      display: flex;
+      align-items: center;
       position: absolute;
-      top: -220px;
+      background-color: $color-white;
+      border-radius: 3px;
+      border:1px solid $color-silver;
+      @include h4-para-mobile;
+      padding-left: 10px;
+      top: -200px;
       right: 10px;
       width: 200px;
-      height: 100px;
+      height: 50px;
       border: 1px solid grey;
 
       @include tablet{
