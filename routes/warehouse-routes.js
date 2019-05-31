@@ -24,7 +24,7 @@ const createWarehouse = (req, res) => {
         inventoryCategories
     }
     warehouseData.push(newWarehouse);
-    res.json(newWarehouse);
+    res.json(newW2arehouse);
 }
 
 router.get('/', getWarehouse);
