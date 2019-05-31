@@ -1,14 +1,42 @@
+@import "../../styles/scss//master";
 
 .missing {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    margin-top: 60px;
+    font-size: 0.9rem;
 
-    background-image: url('../../assets/images/wesley-tingey-1500706-unsplash.jpg');
-    background-size: cover;
-    
-    // width: 100%;
-    // height: auto;
-    margin: 100px 16px 16px 16px;
-    // &__message {
-        
-    // }
+    @include tablet {
+      font-size: 1.3rem;
+    }
 
+    @include desktop {
+      font-size: 1.5rem;
+    }
+
+    &--message {
+      width: 85%;
+
+      @include tablet {
+        justify-content: center;
+      }
+
+      @include desktop {
+        justify-content: center;
+        width: 90%;
+        margin-left: 40%;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
 }
