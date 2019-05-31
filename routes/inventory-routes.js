@@ -43,6 +43,6 @@ router.delete('/:id', (req, res) => {
   })
 
 router.get('/', retrieveInventory);
-router.post('/', postInventory)
+router.post('/', postInventory);
 
 module.exports = router;

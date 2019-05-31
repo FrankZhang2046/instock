@@ -8,12 +8,18 @@
 
     @include tablet {
         position: relative;
-        top: -110vh;
+        top: -70vh;
+    }
+
+        
+    @include laptop-small {
+        position: relative;
+        top: -25vh;
     }
     
     @include desktop {
         position: relative;
-        top: -10vh;
+        top: 10vh;
     }
 
     &--header {

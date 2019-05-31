@@ -34,11 +34,12 @@ export default class Inventory extends Component {
         axios
             .delete(`http://localhost:8080/inventory/${id}`)
             .then(result => this.setState({inventory: result.data}))
-        this.setState({inventory: filteredArray});
+                this.setState({inventory: filteredArray});
         
     }
 
     openModal = () => {
+        window.scrollTo(0, 0);
         this.setState({
             modalOpen: true
         })
