@@ -1,0 +1,103 @@
+@import '../../styles/scss/master';
+
+.closeModal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+}
+
+.modal-wrapper {
+
+    @include tablet {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.inventoryModal {
+    
+    @media (max-width: 20rem) {
+        @include modal-window;
+        position: absolute;
+        top: 0;
+    }
+
+    @include tablet {
+        @include modal-window;
+        margin-top: 7rem;
+    }
+
+
+    &__header {
+        @include h1-header-tablet;
+    }
+
+    &__label {
+        @include label;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            width: 13.75rem;
+        }
+
+        &--itemDescription {
+            @include modal-textarea;
+        }
+    }
+
+    &__instock {
+        height: 2.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            width: 13.75rem;
+        }
+
+        &--label {
+            @include h4-lists-contactInfo;
+        }
+    }
+
+    &__buttons {
+        @include modal-buttons;
+
+        & > button {
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.modal__input--field {
+    @include modal-input;
+}
+
+.react-switch-handle {
+    outline: none;
+}
+
+.formError {
+    color: #D8000C;
+    @include h4-lists-contactInfo;
+}
+
+.formSuccess {
+    color: #7AAE3B;
+    @include h4-lists-contactInfo;
+}
+

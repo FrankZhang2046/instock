@@ -1,16 +1,26 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Inventory from '../Pages/Inventory/Inventory';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import NavBar from '../components/NavBar/NavBar';
-import '../styles/styles.scss';
-
+import Location from '../Pages/location/Location';
+import Warehouse from '../components/Warehouse/Warehouse';
+import ProductView from '../Pages/ProductView/ProductView';
+import MissingPage from '../components/MissingPage/MissingPage.js';
+import '../styles/scss/_master.scss';
 
 function App() {
   return (
-    <div className="App">
       <BrowserRouter>
-        <NavBar />
+          <NavBar />
+          <Switch> 
+            <Location exact path="/warehouses"/> 
+            <Inventory exact path="/inventory"/>
+            <Route exact path="/warehouses/404" component={MissingPage} />
+            <Route exact path="/warehouses/:id" component={Warehouse} /> 
+            <Route exact path="/inventory/:id" render={(props)=><ProductView {...props}/>} />
+            <Redirect exact to="/warehouses" from="/" />
+          </Switch>
       </BrowserRouter>
-    </div>
   );
 }
 

@@ -1,0 +1,100 @@
+@import '../../styles/scss/master';
+
+.headerSearchBar{
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    &__header {
+        @include h1-header-mobile;
+
+        @include tablet {
+            @include h1-header-tablet;
+            margin: 48px 0 48px;
+        }
+    }
+
+    &__searchBar {
+        @include searchbar;
+    }
+}
+
+.tableLabels {
+    display: none;
+
+    @include tablet {
+        display: none;
+    }
+
+    @include desktop {
+        display: flex;
+    }
+
+    &__warehouse {
+        width: 210px;
+        color: $color-silver;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+
+        &__labels {
+            width: 50%;
+            color: $color-silver;
+        }
+    }
+}
+
+.pageContainer {
+    position: relative;
+
+    margin: 0 16px 0;
+
+    @include tablet {
+        margin: 0 24px 0;
+    }
+
+    @include desktop {
+        margin: 0 180px 0;
+    }
+}
+
+.addIcon {
+    background: #0065AD;
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    top: 85vh;
+    left: 75vw;
+    border: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+
+    @include tablet {
+        top: 80vh;
+        left: 85vw;
+        height: 80px;
+        width: 80px;
+    }
+
+    @include desktop {
+        top: 83vh;
+        left: 90vw;
+        height: 80px;
+        width: 80px;
+    }
+}

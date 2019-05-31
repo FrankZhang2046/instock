@@ -1,0 +1,168 @@
+@import "../../styles/scss/master";
+
+.item {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+    margin: auto 16px;
+
+    @include tablet {
+        flex-direction: row;
+        width:95%;
+        justify-content: space-between;
+        margin: auto 24px;
+        height:100px;
+    }
+    @include desktop {
+        flex-direction: row;
+        width:90%;
+        max-width: 1080px;
+        justify-content: space-between;
+        margin-left: 180px;
+        margin-right: 180px;
+        height:100px;
+    }
+  }
+
+  &__header{
+    margin-top: 32px;
+    margin-bottom: 0px;
+    @include label;
+    @include tablet{
+        display:none;
+    }
+
+      
+    }
+
+    &__description{
+    @include h3-subheader;
+    @include tablet{
+        flex-direction: column;
+        width: 30%;
+    }
+    @include tablet{
+        flex-direction: column;
+        width: 20%;
+    }
+    &--content{
+        margin-top: 16px;
+        @include h4-para-mobile;
+
+        @include tablet{
+          margin-top: 0px;
+          margin-bottom: 24px;
+        }
+    }
+    &--header{
+      @include tablet{
+        margin-bottom: 0px;
+        margin-top: 24px;
+      }
+    }
+}
+
+
+&__date {
+    @include tablet{
+        width: 10%;
+        flex-direction: column;
+        align-self: center;
+      }
+      &--header{
+        @include label;
+        display:none;
+    }
+}
+&__location {
+    @include tablet{
+        align-self: center;
+    }
+    &--header{
+        @include label;
+        @include tablet {
+          display: none;
+        }
+    }
+}
+&__quantity {
+    @include tablet{
+        align-self: center;
+    }
+    &--header{
+        @include label;
+        @include tablet {
+          display: none;
+        }
+    }
+}
+&__status {
+    @include tablet{
+        align-self: center;
+        margin-right: 60px;
+        width:95px;
+    }
+    &--header{
+
+        @include label;
+        @include tablet {
+          display: none;
+        }
+    }
+}
+
+  &__removeButton {
+    position: relative;
+    top: -220px;
+    float: right;
+    margin-right: 16px;
+  
+    @include tablet{
+        order: 5;
+        top:-32px;
+        margin-right: 24px;
+    }
+    @include desktop{
+        left: 630px;
+        order: 5;
+        float:none;
+        top:-32px;
+        margin-right: 180px;
+    }
+
+    &--popUp-clicked {
+      display: flex;
+      align-items: center;
+      box-shadow:20px 20px 50px grey;  
+      position: absolute;
+      background-color: $color-white;
+      border-radius: 5px;
+      border:1px solid $color-silver;
+      @include h4-para-mobile;
+      padding-left: 10px;
+      top: -200px;
+      right: 10px;
+      width: 200px;
+      height: 50px;
+      border: 1px solid grey;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      @include tablet{
+        top:-10px;
+      }
+      @include desktop{
+        top:-10px;
+        left:450px;
+      }
+    }
+    &--popUp-folded {
+      display: none;
+      width: 200px;
+      height: 100px;
+    }
+  }
+}

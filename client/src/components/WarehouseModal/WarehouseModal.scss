@@ -1,0 +1,96 @@
+@import '../../styles/scss/master.scss';
+
+.modal {
+    @include modal-window;
+    position: absolute;
+    top: 377px;
+    left: -16px;
+
+    @include tablet {
+        position: relative;
+        top: -70vh;
+    }
+
+        
+    @include laptop-small {
+        position: relative;
+        top: -25vh;
+    }
+    
+    @include desktop {
+        position: relative;
+        top: 10vh;
+    }
+
+    &--header {
+        @include h1-header-mobile;
+
+        @include tablet {
+            @include h1-header-tablet;
+        }
+
+        @include desktop {
+            @include h1-header-tablet;
+        }
+    }
+
+    &__inputRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        @include tablet {
+            width: 220px;
+        }
+
+        @include desktop {
+            width: 220px;
+        }
+
+        &__label {
+            @include label;
+            margin-bottom: 8px;
+        }
+
+        &__inputField {
+            @include modal-input;
+        }
+
+        &__warehouseInput {
+            @include modal-textarea;
+        }
+
+        &__warehouse {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__buttons {
+        @include modal-buttons;
+    }
+}
+
+.modalBackground {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+}
