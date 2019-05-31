@@ -12,10 +12,15 @@ export default class Inventory extends Component {
         modalOpen: false,
     }
     
-    componentDidMount(){
+    getInventory = () => {
         axios.get(`http://localhost:8080/inventory`)
-            .then(result => this.setState({inventory: result.data})
+            .then(result => 
+                this.setState({inventory: result.data})
             )
+    }
+
+    componentDidMount(){ 
+        this.getInventory();
     }
 
     componentDidUpdate(){
@@ -24,13 +29,11 @@ export default class Inventory extends Component {
         }
     }
 
-    removeItem = (id) =>{
+    removeItem = (id) => {
         const filteredArray = this.state.inventory.filter(item => {return item.id !== id});
         axios
             .delete(`http://localhost:8080/inventory/${id}`)
-            .then(() => {
-            console.log("deleted")
-        })
+            .then(result => this.setState({inventory: result.data}))
         this.setState({inventory: filteredArray});
         
     }
@@ -54,6 +57,13 @@ export default class Inventory extends Component {
                 <div className="page-header">
                     <h1 className="page-header__heading">Inventory</h1>
                     <input type="text" className="page-header__searchbar" placeholder="search"/>
+                </div>
+                <div className="inventory__header">
+                    <div className="inventory__header--content-item">ITEM</div>
+                    <div className="inventory__header--content-lastOrdered">LAST ORDERED</div>
+                    <div className="inventory__header--content-location">LOCATION</div>
+                    <div className="inventory__header--content-quantity">QUANTITY</div>
+                    <div className="inventory__header--content-status">STATUS</div>
                 </div>
                 <div className="inventory__items">
                     {this.state.inventory.map(product=>{

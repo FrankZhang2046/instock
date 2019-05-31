@@ -1,5 +1,15 @@
 @import '../../styles/scss/master';
 
+html,
+body {
+  // adding styling instructions to remove any unwanted white space
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
     color: $color-black;
@@ -8,6 +18,7 @@ a {
 .page-header {
     margin-left: 16px;
     @include tablet {
+        margin-left: 24px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -19,23 +30,59 @@ a {
         flex-direction: row;
         justify-content: space-between;
         align-content: center;
+        margin-left: 180px;
+        max-width: 1080px;
     }
 
     &__heading {
         @include h1-header-mobile;
+        margin-top: 32px;
 
         @include tablet {
             @include h1-header-tablet;
             margin: 48px 0 48px;
         }
+        
     }
 
     &__searchbar {
         @include searchbar;
+
+        @include tablet{
+            margin-right: 24px;
+        }
+       
     }
 }
 
 .inventory{
     &__container{
     }
+
+    &__header{
+        display: none;
+        @include tablet{
+            @include label;
+            margin: auto 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop{
+            @include label;
+            max-width: 1080px;
+            margin: auto 180px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &--content-item{
+            width:18%;
+        }
+        &--content-status{
+            width:10%;
+            margin-right: 20px;
+        }
+    }
+
 }
