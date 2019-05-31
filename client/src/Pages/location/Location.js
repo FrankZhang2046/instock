@@ -35,8 +35,8 @@ export class Location extends Component {
     render() {
         return (
             <div className="pageContainer">
-                {/* If modalShowing is true, sets background to transparent black and adds onClick to close modal */}
-                { this.state.modalShowing ? <div onClick={this.closeModal} className="modalBackground"></div> : null }
+                {/* If modalShowing is true, sets background to transparent black */}
+                { this.state.modalShowing ? <div className="modalBackground"></div> : null }
                 <div className="headerSearchBar">
                     <h1 className="headerSearchBar__header" >Locations</h1>
                     <input className="headerSearchBar__searchBar" type="text"  placeholder="search"></input>
