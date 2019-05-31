@@ -39,6 +39,7 @@ export default class Inventory extends Component {
     }
 
     openModal = () => {
+        window.scrollTo(0, 0);
         this.setState({
             modalOpen: true
         })
