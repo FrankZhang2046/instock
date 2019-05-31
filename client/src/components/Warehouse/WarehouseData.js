@@ -5,16 +5,15 @@ import "./warehouse.scss";
 
 export class WarehouseData extends Component {
   render() {
+    
     const { name, address, contact } = this.props.warehouseData;
-
-    console.log(this.props.warehouseData);
 
     return (
       <div className="header">
         <div className="header1">
           <div className="header1__title">
             <div className="header1__title--icon">
-              <Link to="/locations">
+              <Link to="/warehouses">
                 <img src={iconback} alt="iconback" />
               </Link>
             </div>

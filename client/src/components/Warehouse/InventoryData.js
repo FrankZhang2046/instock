@@ -46,7 +46,7 @@ export class InventoryData extends Component {
             <div className="product2__status">{status}</div>
           </div>
           <div className="product2__icon1">
-            <img src={kebab} alt="iconkebab" />
+          <img src={kebab} alt="iconkebab"/>
           </div>
           <div className="product2__border" />
         </div>
